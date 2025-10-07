@@ -11,3 +11,12 @@
 
 #!.yarn/cache
 .pnp.*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.envrc
