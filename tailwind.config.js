@@ -6,19 +6,22 @@ module.exports = {
   plugins: [heroui()],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['"Noto Sans TC"', 'sans-serif'],
+        'lxgw-wenkai-tc': ['"LXGW WenKai TC"', 'sans-serif'],
+      },
       colors: {
-        /** Primary */
-        "-cobalt-4": "#080721",
-        "-cobalt-3": "#151254",
-        "-cobalt-2": "#211D86",
-        "-cobalt-1": "#2D28B8",
-        cobalt: "#4C47D7",
-        "cobalt-1": "#6560F0",
-        "cobalt-2": "#8581F8",
-        "cobalt-3": "#A7A7F1",
-        "cobalt-4": "#CAC9F8",
-        "cobalt-5": "#E2E2FD",
-        "cobalt-6": "#EBEEFF",
+        /** Blues */
+        "blue-primary": "#4e7fa3", // darkest
+        "blue-secondary": "#93AEBF", // middle
+        "blue-tertiary": "#E4EDF2", // lightest
+        /** Browns */
+        "brown-primary": "#611D0F", // red-brown
+        "brown-secondary": "#664935", // brown
+        "brown-tertiary": "#DFD3B5", // tan
+        /** neutrals */
+        "paper-white": "#FFFBF0",
+        "ink-black": "##141414",
       },
     },
   },
