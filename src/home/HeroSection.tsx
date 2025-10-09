@@ -1,5 +1,4 @@
-import { ChineseH2, H2, H3 } from "../design/Typography";
-import { HeroCard } from "../components/HeroCard";
+import { HeroCard } from "./HeroCard";
 import _ from "lodash";
 import {
   Book,
@@ -17,17 +16,17 @@ export function HeroSection() {
   const heroCards = [
     {
       icon: Book,
-      englishDescription: "currently readings",
+      englishDescription: "current readings",
       chineseDescription: "正在讀什麼",
     },
     {
       icon: Film,
-      englishDescription: "currently watchings",
+      englishDescription: "current watchings",
       chineseDescription: "正在看什麼",
     },
     {
       icon: Whale,
-      englishDescription: "currently listenings",
+      englishDescription: "current listenings",
       chineseDescription: "正在聽什麼",
     },
     {
