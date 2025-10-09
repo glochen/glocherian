@@ -1,10 +1,11 @@
+import { HomeHeader } from "./HomeHeader";
 import { HeroSection } from "./HeroSection";
 
 export function HomePage() {
   return (
-    <div className="bg-paper-white min-h-screen text-ink-black">
+    <div className="bg-paper-white min-h-screen">
+      <HomeHeader />
       <HeroSection />
-      <div className="h-1 bg-brown-primary"></div>
     </div>
   );
 }
