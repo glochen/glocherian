@@ -21,7 +21,7 @@ module.exports = {
         "brown-tertiary": "#DFD3B5", // tan
         /** neutrals */
         "paper-white": "#FFFBF0",
-        "ink-black": "##141414",
+        "ink-black": "#141414",
       },
     },
   },
