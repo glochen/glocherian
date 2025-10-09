@@ -10,11 +10,13 @@
     "@types/node": "^16.18.60",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
+    "@types/react-router-dom": "^5.3.3",
     "dayjs": "^1.11.10",
     "framer-motion": "^12.19.2",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.4",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5"
   },
