@@ -1,4 +1,4 @@
-import { ChineseH1, H2 } from "../design/Typography";
+import { ChineseH1, H3 } from "../design/Typography";
 
 export function HomeHeader() {
   return (
@@ -9,7 +9,7 @@ export function HomeHeader() {
           <ChineseH1>
             哈咯 ヾ{"("}^-^{")"}
           </ChineseH1>
-          <H2>hope you have a fun romp around</H2>
+          <H3 color="blue-primary">have a fun romp around</H3>
         </div>
       </div>
       <div className="brush-stroke-line"></div>

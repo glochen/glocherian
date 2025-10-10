@@ -21,20 +21,20 @@ export function Footer() {
             onPress={handleAboutClick}
           >
             <Bonsai size="md" />
-            <span className="text-blue-primary font-lxgw-wenkai-tc text-xs">
+            <span className="text-ink-black font-lxgw-wenkai-tc text-xs">
               我是誰
             </span>
-            <span className="text-brown-secondary font-sans text-xs">about me</span>
+            <span className="text-blue-primary font-sans text-xs">about me</span>
           </Button>
           <Button
             className="hover:bg-brown-secondary/25 transition-colors duration-200 rounded-md p-0 min-w-0 w-20 h-28 flex flex-col items-center justify-center gap-0.5"
             onPress={handleContactClick}
           >
             <Fish size="md" />
-            <span className="text-blue-primary font-lxgw-wenkai-tc text-xs">
+            <span className="text-ink-black font-lxgw-wenkai-tc text-xs">
               敲我一下
             </span>
-            <span className="text-brown-secondary font-sans text-xs">contact me</span>
+            <span className="text-blue-primary font-sans text-xs">contact me</span>
           </Button>
         </div>
       </div>

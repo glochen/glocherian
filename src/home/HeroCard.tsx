@@ -13,7 +13,7 @@ export function HeroCard({ icon: Icon, englishDescription, chineseDescription }:
       <div className="mb-4">
         <Icon size="lg" />
       </div>
-      <div className="text-brown-primary text-md font-lxgw-wenkai-tc">{chineseDescription}</div>
+      <div className="text-ink-black text-md font-lxgw-wenkai-tc">{chineseDescription}</div>
       <div className="text-blue-primary text-md font-sans">{englishDescription}</div>
     </div>
   );
