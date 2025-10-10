@@ -1,6 +1,6 @@
 ## overview
 
-hi - welcome
+my own website :D
 
 
 ### notes for myself
