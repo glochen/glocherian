@@ -24,7 +24,7 @@ export function VerticalNavPageLayout({
           className={`flex flex-row items-center justify-start rounded-md p-1 ${
             currentPageId === "home"
               ? "bg-brown-tertiary"
-              : "hover:bg-blue-tertiary"
+              : "hover:bg-brown-tertiary/40"
           }`}
         >
           <img
@@ -49,7 +49,7 @@ export function VerticalNavPageLayout({
               className={`flex flex-row gap-2 sm:gap-4 items-center justify-start rounded-md p-1 ${
                 isCurrentPage
                   ? "group-hover/nav:bg-brown-tertiary"
-                  : "hover:bg-blue-tertiary"
+                  : "hover:bg-brown-tertiary/40"
               }`}
             >
               <div
