@@ -5,11 +5,15 @@ interface HeroCardProps {
   icon: React.ComponentType<IconProps>;
   englishDescription: string;
   chineseDescription: string;
+  onClick?: () => void;
 }
 
-export function HeroCard({ icon: Icon, englishDescription, chineseDescription }: HeroCardProps) {
+export function HeroCard({ icon: Icon, englishDescription, chineseDescription, onClick }: HeroCardProps) {
   return (
-    <div className="flex flex-col items-center justify-center p-6 gap-1 rounded-xl border border-brown-tertiary/20 hover:bg-brown-tertiary/20 transition-all duration-300 hover:scale-105">
+    <div 
+      className={`flex flex-col items-center justify-center p-6 gap-1 rounded-xl border border-brown-tertiary/20 hover:bg-brown-tertiary/20 transition-all duration-300 hover:scale-105 ${onClick ? 'cursor-pointer' : ''}`}
+      onClick={onClick}
+    >
       <div className="mb-4">
         <Icon size="lg" />
       </div>

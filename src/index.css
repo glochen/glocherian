@@ -27,4 +27,17 @@ code {
     border-radius: 1px;
     box-shadow: 0 1px 2px theme('colors.brown-primary / 20%');
   }
+  
+  .brush-stroke-line-vertical {
+    position: relative;
+    width: 2px;
+    background: linear-gradient(180deg, 
+      transparent 0%, 
+      theme('colors.brown-primary / 60%') 20%, 
+      theme('colors.brown-primary / 80%') 50%, 
+      theme('colors.brown-primary / 60%') 80%, 
+      transparent 100%);
+    border-radius: 1px;
+    box-shadow: 1px 0 2px theme('colors.brown-primary / 20%');
+  }
 }
