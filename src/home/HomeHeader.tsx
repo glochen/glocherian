@@ -1,4 +1,4 @@
-import { ChineseH1, ChineseH2, H1, H2 } from "../design/Typography";
+import { ChineseH1, H2 } from "../design/Typography";
 
 export function HomeHeader() {
   return (
