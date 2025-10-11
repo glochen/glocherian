@@ -14,7 +14,6 @@ export function CurrentWatchings() {
 
   return (
     <VerticalNavPageLayout>
-      {/* Watch Icons Header */}
       <div className="py-12 px-8">
         <div className="flex justify-center items-center">
            <Film size="md" />
@@ -22,54 +21,45 @@ export function CurrentWatchings() {
       </div>
 
       <div className="flex-grow shrink-0 px-8 pb-12">
-        <div className="space-y-16">
-          {/* Currently Watching Section */}
-          {!_.isEmpty(currentlyWatching) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_.map(currentlyWatching, (watching) => (
-                <WatchContentCard
-                  key={watching.title}
-                  title={watching.title}
-                  type={watching.type}
-                  provider={watching.provider}
-                  description={watching.description}
-                  status={watching.status}
-                />
-              ))}
-            </div>
-          )}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="space-y-6">
+            {_.map(currentlyWatching, (watching) => (
+              <WatchContentCard
+                key={watching.title}
+                title={watching.title}
+                type={watching.type}
+                provider={watching.provider}
+                description={watching.description}
+                status={watching.status}
+              />
+            ))}
+          </div>
 
-          {/* Recently Completed Section */}
-          {!_.isEmpty(completedWatchings) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_.map(completedWatchings, (watching) => (
-                <WatchContentCard
-                  key={watching.title}
-                  title={watching.title}
-                  type={watching.type}
-                  provider={watching.provider}
-                  description={watching.description}
-                  status={watching.status}
-                />
-              ))}
-            </div>
-          )}
+          <div className="space-y-6">
+            {_.map(completedWatchings, (watching) => (
+              <WatchContentCard
+                key={watching.title}
+                title={watching.title}
+                type={watching.type}
+                provider={watching.provider}
+                description={watching.description}
+                status={watching.status}
+              />
+            ))}
+          </div>
 
-          {/* Planned Section */}
-          {!_.isEmpty(plannedWatchings) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_.map(plannedWatchings, (watching) => (
-                <WatchContentCard
-                  key={watching.title}
-                  title={watching.title}
-                  type={watching.type}
-                  provider={watching.provider}
-                  description={watching.description}
-                  status={watching.status}
-                />
-              ))}
-            </div>
-          )}
+          <div className="space-y-6">
+            {_.map(plannedWatchings, (watching) => (
+              <WatchContentCard
+                key={watching.title}
+                title={watching.title}
+                type={watching.type}
+                provider={watching.provider}
+                description={watching.description}
+                status={watching.status}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </VerticalNavPageLayout>

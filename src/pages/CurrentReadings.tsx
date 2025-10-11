@@ -15,7 +15,6 @@ export function CurrentReadings() {
 
   return (
     <VerticalNavPageLayout>
-      {/* Book Icons Header */}
       <div className="py-12 px-8">
         <div className="flex justify-center items-center">
           {_.map(bookIcons, (Icon, index) => (
@@ -29,51 +28,42 @@ export function CurrentReadings() {
       </div>
 
       <div className="flex-grow shrink-0 px-8 pb-12">
-        <div className="space-y-16">
-          {/* Currently Reading Section */}
-          {!_.isEmpty(currentlyReading) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_.map(currentlyReading, (reading) => (
-                <BookContentCard
-                  key={reading.title}
-                  title={reading.title}
-                  author={reading.author}
-                  description={reading.description}
-                  status={reading.status}
-                />
-              ))}
-            </div>
-          )}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="space-y-6">
+            {_.map(currentlyReading, (reading) => (
+              <BookContentCard
+                key={reading.title}
+                title={reading.title}
+                author={reading.author}
+                description={reading.description}
+                status={reading.status}
+              />
+            ))}
+          </div>
 
-          {/* Recently Completed Section */}
-          {!_.isEmpty(completedReadings) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_.map(completedReadings, (reading) => (
-                <BookContentCard
-                  key={reading.title}
-                  title={reading.title}
-                  author={reading.author}
-                  description={reading.description}
-                  status={reading.status}
-                />
-              ))}
-            </div>
-          )}
+          <div className="space-y-6">
+            {_.map(completedReadings, (reading) => (
+              <BookContentCard
+                key={reading.title}
+                title={reading.title}
+                author={reading.author}
+                description={reading.description}
+                status={reading.status}
+              />
+            ))}
+          </div>
 
-          {/* Planned Section */}
-          {!_.isEmpty(plannedReadings) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_.map(plannedReadings, (reading) => (
-                <BookContentCard
-                  key={reading.title}
-                  title={reading.title}
-                  author={reading.author}
-                  description={reading.description}
-                  status={reading.status}
-                />
-              ))}
-            </div>
-          )}
+          <div className="space-y-6">
+            {_.map(plannedReadings, (reading) => (
+              <BookContentCard
+                key={reading.title}
+                title={reading.title}
+                author={reading.author}
+                description={reading.description}
+                status={reading.status}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </VerticalNavPageLayout>
