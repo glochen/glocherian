@@ -20,12 +20,12 @@ code {
     height: 2px;
     background: linear-gradient(90deg, 
       transparent 0%, 
-      theme('colors.brown-primary / 60%') 20%, 
-      theme('colors.brown-primary / 80%') 50%, 
-      theme('colors.brown-primary / 60%') 80%, 
+      #611D0F 20%, /* brown-primary */
+      #611D0F 50%, /* brown-primary */
+      #611D0F 80%, /* brown-primary */
       transparent 100%);
     border-radius: 1px;
-    box-shadow: 0 1px 2px theme('colors.brown-primary / 20%');
+    box-shadow: 0 1px 2px rgba(97, 29, 15, 0.2); /* brown-primary with 20% opacity */
   }
   
   .brush-stroke-line-vertical {
@@ -33,11 +33,29 @@ code {
     width: 2px;
     background: linear-gradient(180deg, 
       transparent 0%, 
-      theme('colors.brown-primary / 60%') 20%, 
-      theme('colors.brown-primary / 80%') 50%, 
-      theme('colors.brown-primary / 60%') 80%, 
+      rgba(97, 29, 15, 0.6) 20%, /* brown-primary with 60% opacity */
+      rgba(97, 29, 15, 0.8) 50%, /* brown-primary with 80% opacity */
+      rgba(97, 29, 15, 0.6) 80%, /* brown-primary with 60% opacity */
       transparent 100%);
     border-radius: 1px;
-    box-shadow: 1px 0 2px theme('colors.brown-primary / 20%');
+    box-shadow: 1px 0 2px rgba(97, 29, 15, 0.2); /* brown-primary with 20% opacity */
+  }
+  
+  .content-card-border {
+    position: relative;
+  }
+  
+  .content-card-border::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, 
+      currentColor 0%, 
+      currentColor 35%, 
+      transparent 100%);
+    border-radius: 1px;
   }
 }

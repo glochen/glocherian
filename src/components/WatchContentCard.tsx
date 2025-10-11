@@ -21,20 +21,20 @@ export function WatchContentCard({
 }: WatchContentCardProps) {
   const statusStyles = {
     [WatchingStatus.Watching]: {
-      border: "border-l-4 border-l-blue-primary",
-      bg: "bg-gradient-to-r from-blue-primary/5 to-transparent",
+      border: "content-card-border text-blue-primary",
+      bg: "",
       dot: "bg-blue-primary",
       text: "text-blue-primary",
     },
     [WatchingStatus.RecentlyCompleted]: {
-      border: "border-l-4 border-l-brown-primary",
-      bg: "bg-gradient-to-r from-brown-primary/5 to-transparent",
+      border: "content-card-border text-brown-primary",
+      bg: "",
       dot: "bg-brown-primary",
       text: "text-brown-primary",
     },
     [WatchingStatus.Planned]: {
-      border: "border-l-4 border-l-brown-tertiary",
-      bg: "bg-gradient-to-r from-brown-tertiary/5 to-transparent",
+      border: "content-card-border text-brown-tertiary",
+      bg: "",
       dot: "bg-brown-tertiary",
       text: "text-brown-tertiary",
     },

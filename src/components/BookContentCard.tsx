@@ -19,26 +19,26 @@ export function BookContentCard({
 }: BookContentCardProps) {
   const statusStyles = {
     [ReadingStatus.Reading]: {
-      border: "border-l-4 border-l-blue-primary",
-      bg: "bg-gradient-to-r from-blue-primary/5 to-transparent",
+      border: "content-card-border text-blue-primary",
+      bg: "",
       dot: "bg-blue-primary",
       text: "text-blue-primary",
     },
     [ReadingStatus.RecentlyCompleted]: {
-      border: "border-l-4 border-l-brown-primary",
-      bg: "bg-gradient-to-r from-brown-primary/5 to-transparent",
+      border: "content-card-border text-brown-primary",
+      bg: "",
       dot: "bg-brown-primary",
       text: "text-brown-primary",
     },
     [ReadingStatus.Planned]: {
-      border: "border-l-4 border-l-brown-tertiary",
-      bg: "bg-gradient-to-r from-brown-tertiary/5 to-transparent",
+      border: "content-card-border text-brown-tertiary",
+      bg: "",
       dot: "bg-brown-tertiary",
       text: "text-brown-tertiary",
     },
     [ReadingStatus.Favorite]: {
-      border: "border-l-4 border-l-brown-secondary",
-      bg: "bg-gradient-to-r from-brown-secondary/5 to-transparent",
+      border: "content-card-border text-brown-secondary",
+      bg: "",
       dot: "bg-brown-secondary",
       text: "text-brown-secondary",
     },
