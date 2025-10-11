@@ -12,6 +12,7 @@ import { Calligraphy } from "./design/icons";
 import React from "react";
 import { CurrentReadings } from "./pages/CurrentReadings";
 import { CurrentWatchings } from "./pages/CurrentWatchings";
+import { CurrentListenings } from "./pages/CurrentListenings";
 
 export const pages = [
   {
@@ -32,6 +33,7 @@ export const pages = [
   },
   {
     id: "current-listenings",
+    pageComponent: (): JSX.Element => React.createElement(CurrentListenings),
     icon: Whale,
     englishDescription: "current listenings",
     chineseDescription: "正在聽什麼",
