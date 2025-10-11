@@ -1,5 +1,5 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { BookContentCard } from "../components/BookContentCard";
+import { BookContentCard } from "../components/ContentCards/BookContentCard";
 import { getReadingsByStatus, ReadingStatus } from "../data/books";
 import { BookStack, Books1 } from "../design/icons/GeneralIcons";
 import _ from "lodash";

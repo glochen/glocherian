@@ -7,8 +7,8 @@ import {
   musicGenreText, 
   PodcastGenre, 
   podcastGenreText 
-} from "../data/listenings";
-import { H3 } from "../design/Typography";
+} from "../../data/listenings";
+import { H3 } from "../../design/Typography";
 import _ from "lodash";
 
 interface ListenContentCardProps {

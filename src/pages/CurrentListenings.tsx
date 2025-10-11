@@ -1,5 +1,5 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { ListenContentCard } from "../components/ListenContentCard";
+import { ListenContentCard } from "../components/ContentCards/ListenContentCard";
 import { getListeningsByStatus, ListeningStatus } from "../data/listenings";
 import { Music } from "../design/icons/GeneralIcons";
 import _ from "lodash";

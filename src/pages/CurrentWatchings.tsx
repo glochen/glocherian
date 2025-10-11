@@ -1,5 +1,5 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { WatchContentCard } from "../components/WatchContentCard";
+import { WatchContentCard } from "../components/ContentCards/WatchContentCard";
 import { getWatchingsByStatus, WatchingStatus } from "../data/watchings";
 import { Film } from "../design/icons/GeneralIcons";
 import _ from "lodash";
