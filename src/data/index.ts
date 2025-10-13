@@ -1,4 +1,4 @@
-export { currentReadings, getReadingsByStatus } from "./books";
+export { currentReadings, favoriteBooks, getReadingsByStatus, BookGenre } from "./books";
 export type { ReadingItem } from "./books";
 export { currentWatchings, getWatchingsByStatus } from "./watchings";
 export type { WatchingItem } from "./watchings";

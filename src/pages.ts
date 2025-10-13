@@ -13,6 +13,7 @@ import React from "react";
 import { CurrentReadings } from "./pages/CurrentReadings";
 import { CurrentWatchings } from "./pages/CurrentWatchings";
 import { CurrentListenings } from "./pages/CurrentListenings";
+import { FavoriteBooks } from "./pages/FavoriteBooks";
 
 export const pages = [
   {
@@ -41,6 +42,7 @@ export const pages = [
   },
   {
     id: "favorite-books",
+    pageComponent: (): JSX.Element => React.createElement(FavoriteBooks),
     icon: Books,
     englishDescription: "favorite books",
     chineseDescription: "最喜歡的書",

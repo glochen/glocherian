@@ -1,7 +1,7 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
 import { BookContentCard } from "../components/ContentCards/BookContentCard";
 import { getReadingsByStatus, ReadingStatus } from "../data/books";
-import { BookStack, Books1 } from "../design/icons/GeneralIcons";
+import { BookStack } from "../design/icons/GeneralIcons";
 import _ from "lodash";
 
 export function CurrentReadings() {
@@ -11,19 +11,11 @@ export function CurrentReadings() {
   );
   const plannedReadings = getReadingsByStatus(ReadingStatus.Planned);
 
-  const bookIcons = [Books1, BookStack, Books1];
-
   return (
     <VerticalNavPageLayout>
       <div className="py-12 px-8">
         <div className="flex justify-center items-center">
-          {_.map(bookIcons, (Icon, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <div className="rotate-90">
-                <Icon size="md" />
-              </div>
-            </div>
-          ))}
+          <BookStack size="md" />
         </div>
       </div>
 
@@ -37,6 +29,7 @@ export function CurrentReadings() {
                 author={reading.author}
                 description={reading.description}
                 status={reading.status}
+                genre={reading.genre}
               />
             ))}
           </div>
@@ -49,6 +42,7 @@ export function CurrentReadings() {
                 author={reading.author}
                 description={reading.description}
                 status={reading.status}
+                genre={reading.genre}
               />
             ))}
           </div>
@@ -61,6 +55,7 @@ export function CurrentReadings() {
                 author={reading.author}
                 description={reading.description}
                 status={reading.status}
+                genre={reading.genre}
               />
             ))}
           </div>

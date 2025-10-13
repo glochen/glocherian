@@ -1,4 +1,4 @@
-import { ReadingStatus, statusText } from "../../data/books";
+import { ReadingStatus, statusText, BookGenre } from "../../data/books";
 import { H3 } from "../../design/Typography";
 import _ from "lodash";
 
@@ -7,6 +7,7 @@ interface BookContentCardProps {
   author?: string;
   description?: string;
   status?: ReadingStatus;
+  genre?: BookGenre;
   className?: string;
 }
 
@@ -15,6 +16,7 @@ export function BookContentCard({
   author,
   description,
   status = ReadingStatus.Reading,
+  genre,
   className = "",
 }: BookContentCardProps) {
   const statusStyles = {
@@ -65,12 +67,22 @@ export function BookContentCard({
         {title}
       </H3>
 
-      {/* Author */}
-      {author && (
-        <p className="text-ink-black font-sans text-sm mb-3">
-          {author}
-        </p>
-      )}
+      {/* Author and Genre */}
+      <div className="flex items-center gap-2 mb-3">
+        {author && (
+          <p className="text-ink-black font-sans text-sm">
+            {author}
+          </p>
+        )}
+        {author && genre && (
+          <span className="text-ink-black/60">•</span>
+        )}
+        {genre && (
+          <p className="text-ink-black font-sans text-sm">
+            {genre}
+          </p>
+        )}
+      </div>
 
       {/* Description */}
       {description && (
