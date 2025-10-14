@@ -40,16 +40,16 @@ export function ListeningRow({
         {!isExpanded && (
           <div className="h-full flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <h4 className="text-sm font-medium text-ink-black leading-tight truncate">
+              <h4 className="text-sm font-medium text-brown-primary leading-tight truncate">
                 {item.name}
               </h4>
-              <span className="text-ink-black/60">•</span>
-              <p className="text-xs text-ink-black/70 truncate">
+              <span className="text-brown-secondary">•</span>
+              <p className="text-xs text-brown-secondary truncate">
                 {item.artistOrPodcast}
               </p>
             </div>
             {genreText && (
-              <p className="text-xs text-ink-black/60">{genreText}</p>
+              <p className="text-xs text-brown-secondary">{genreText}</p>
             )}
           </div>
         )}
@@ -61,16 +61,16 @@ export function ListeningRow({
             <div className="mb-2">
               <div className="flex flex-row items-center justify-between mb-1">
                 <div className="flex items-center gap-2">
-                  <h4 className="text-sm font-medium text-ink-black leading-tight">
+                  <h4 className="text-sm font-medium text-brown-primary leading-tight">
                     {item.name}
                   </h4>
-                  <span className="text-ink-black/60">•</span>
-                  <p className="text-xs text-ink-black/70">
+                  <span className="text-brown-secondary">•</span>
+                  <p className="text-xs text-brown-secondary">
                     {item.artistOrPodcast}
                   </p>
                 </div>
                 {genreText && (
-                  <p className="text-xs text-ink-black/60">{genreText}</p>
+                  <p className="text-xs text-brown-secondary">{genreText}</p>
                 )}
               </div>
             </div>

@@ -33,7 +33,7 @@ export function FavoriteListenings() {
         </div>
       </div>
 
-      <div className="flex-grow shrink-0 px-8 pb-12">
+      <div className="flex-grow shrink-0 px-8 pb-12 text-brown-primary">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <ListeningColumn
             title={typeText[ListeningType.Song]}

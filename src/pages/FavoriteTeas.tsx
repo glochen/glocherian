@@ -16,7 +16,7 @@ export function FavoriteTeas() {
         </div>
       </div>
 
-      <div className="flex-grow shrink-0 px-8 pb-12">
+      <div className="flex-grow shrink-0 px-8 pb-12 text-brown-primary">
         {!_.isEmpty(types) && (
           <div className="space-y-12">
             {_.map(types, (type) => (

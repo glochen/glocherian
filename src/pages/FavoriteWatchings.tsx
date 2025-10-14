@@ -47,7 +47,7 @@ export function FavoriteWatchings() {
         </div>
       </div>
 
-      <div className="flex-grow shrink-0 px-8 pb-12">
+      <div className="flex-grow shrink-0 px-8 pb-12 text-brown-primary">
         {!_.isEmpty(sortedSections) && (
           <div className="space-y-8">
             {_.map(sortedSections, (section, index) => (

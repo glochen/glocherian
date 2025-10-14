@@ -21,7 +21,7 @@ export function ListeningColumn({ title, items }: ListeningColumnProps) {
 
   return (
     <div className="flex-1">
-      <h3 className="text-lg font-medium text-ink-black mb-4 px-2">{title}</h3>
+      <h3 className="text-lg font-medium text-brown-primary mb-4 px-2">{title}</h3>
       <div className="space-y-2">
         {items.map((item, index) => (
           <ListeningRow
