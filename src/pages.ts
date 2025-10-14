@@ -16,6 +16,7 @@ import { CurrentListenings } from "./pages/CurrentListenings";
 import { FavoriteBooks } from "./pages/FavoriteBooks";
 import { FavoriteWatchings } from "./pages/FavoriteWatchings";
 import { FavoriteListenings } from "./pages/FavoriteListenings";
+import { FavoriteChengyus } from "./pages/FavoriteChengyus";
 
 export const pages = [
   {
@@ -68,6 +69,7 @@ export const pages = [
   },
   {
     id: "favorite-chenyu's",
+    pageComponent: (): JSX.Element => React.createElement(FavoriteChengyus),
     icon: Calligraphy,
     englishDescription: "favorite chenyu's",
     chineseDescription: "最喜歡的成語",

@@ -1,0 +1,82 @@
+import { ChengyuItem } from "../data/chengyus";
+import { ChengyuContentCard } from "./ContentCards/ChengyuContentCard";
+import _ from "lodash";
+
+interface ChengyuBannerProps {
+  chengyu: ChengyuItem;
+  index: number;
+  isHovered: boolean;
+  onHover: () => void;
+  onLeave: () => void;
+  hoveredBannerIndex: number | null;
+}
+
+export const ChengyuBanner: React.FC<ChengyuBannerProps> = ({
+  chengyu,
+  index,
+  isHovered,
+  onHover,
+  onLeave,
+  hoveredBannerIndex,
+}) => {
+  // Calculate if we need to push the next banner to the right
+  const isNextToHovered =
+    hoveredBannerIndex !== null && index === hoveredBannerIndex + 1;
+
+  return (
+    <div
+      className={`relative transition-all duration-500 ease-in-out ${
+        isHovered ? "z-10" : "z-0"
+      } ${isNextToHovered ? "ml-[450px]" : ""}`}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
+    >
+      {/* Chengyu Banner - Traditional Chinese scroll style */}
+      <div
+        className={`
+          w-16 h-80 relative cursor-pointer
+          text-brown-secondary border-brown-secondary
+          flex flex-col
+        `}
+      >
+        {/* Brush stroke borders using existing CSS classes */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Top brush stroke */}
+          <div className="absolute top-0 left-0 right-0 h-0.5 brush-stroke-line opacity-80"></div>
+          {/* Bottom brush stroke */}
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 brush-stroke-line opacity-80"></div>
+          {/* Left brush stroke */}
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 brush-stroke-line-vertical opacity-80"></div>
+          {/* Right brush stroke */}
+          <div className="absolute right-0 top-0 bottom-0 w-0.5 brush-stroke-line-vertical opacity-80"></div>
+        </div>
+
+        {/* Text content - each character on its own row */}
+        <div className="flex flex-col items-center justify-center h-full px-2 py-4 text-ink-black font-lxgw-wenkai-tc">
+          {_.map(chengyu.chengyu.split(''), (character, charIndex) => (
+            <div key={charIndex} className="text-center mb-2 last:mb-0">
+              <div className="text-2xl text-brown-primary leading-none">
+                {character}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Hover card */}
+      <div
+        className={`absolute top-0 left-full ml-3 z-20 transform transition-all duration-500 ease-in-out ${
+          isHovered ? "opacity-100 w-auto" : "opacity-0 w-0 overflow-hidden"
+        }`}
+        style={{ minWidth: "420px" }}
+      >
+        <ChengyuContentCard
+          chengyu={chengyu.chengyu}
+          literalTranslation={chengyu.literalTranslation}
+          meaning={chengyu.meaning}
+          className="bg-paper-white h-80 flex flex-col justify-between"
+        />
+      </div>
+    </div>
+  );
+};
