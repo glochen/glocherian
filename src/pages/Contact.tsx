@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { YinYang } from "../design/icons";
 
 export function Contact() {
   useDocumentTitle("contact | glocherian");
@@ -36,13 +37,8 @@ export function Contact() {
       <div className="flex flex-col items-center justify-center min-h-full px-8 py-12">
         <div className="w-full max-w-2xl">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-lxgw-wenkai-tc text-ink-black mb-4">
-              敲我一下
-            </h1>
-            <p className="text-xl font-sans text-blue-primary">
-              contact me
-            </p>
+          <div className="flex justify-center items-center mb-12">
+            <YinYang size="md" />
           </div>
 
           {/* Contact Form */}

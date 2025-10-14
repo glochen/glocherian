@@ -6,8 +6,7 @@ export function Footer() {
   const navigate = useNavigate();
 
   const handleAboutClick = () => {
-    // Navigate to about page when implemented
-    console.log("About Me clicked");
+    navigate("/about");
   };
 
   const handleContactClick = () => {

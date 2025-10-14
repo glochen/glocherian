@@ -74,4 +74,20 @@ code {
     );
     border-radius: 1px;
   }
+
+  .about-brush-stroke-right {
+    position: relative;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(97, 29, 15, 0.6) 20%,
+      /* brown-primary with 60% opacity */ rgba(97, 29, 15, 0.8) 50%,
+      /* brown-primary with 80% opacity */ rgba(97, 29, 15, 0.6) 80%,
+      /* brown-primary with 60% opacity */ transparent 100%
+    );
+    border-radius: 1px;
+    box-shadow: 1px 0 2px rgba(97, 29, 15, 0.2); /* brown-primary with 20% opacity */
+  }
 }
