@@ -1,15 +1,17 @@
 import { Button } from "@heroui/react";
 import { Bonsai, Fish } from "../design/icons";
+import { useNavigate } from "react-router-dom";
 
 export function Footer() {
+  const navigate = useNavigate();
+
   const handleAboutClick = () => {
     // Navigate to about page when implemented
     console.log("About Me clicked");
   };
 
   const handleContactClick = () => {
-    // Navigate to contact page when implemented
-    console.log("Contact Me clicked");
+    navigate("/contact");
   };
 
   return (

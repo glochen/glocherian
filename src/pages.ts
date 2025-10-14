@@ -7,6 +7,7 @@ import {
   Listening,
   Book,
   Books,
+  Fish,
 } from "./design/icons";
 import { Calligraphy } from "./design/icons";
 import React from "react";
@@ -19,6 +20,7 @@ import { FavoriteListenings } from "./pages/FavoriteListenings";
 import { FavoriteChengyus } from "./pages/FavoriteChengyus";
 import { FavoriteTeas } from "./pages/FavoriteTeas";
 import { FavoriteAdventures } from "./pages/FavoriteAdventures";
+import { Contact } from "./pages/Contact";
 
 export const pages = [
   {
@@ -92,5 +94,13 @@ export const pages = [
     englishDescription: "favorite adventures",
     chineseDescription: "最喜歡的探險",
     title: "favorite adventures | glocherian",
+  },
+  {
+    id: "contact",
+    pageComponent: (): JSX.Element => React.createElement(Contact),
+    icon: Fish,
+    englishDescription: "contact me",
+    chineseDescription: "敲我一下",
+    title: "contact | glocherian",
   },
 ];
