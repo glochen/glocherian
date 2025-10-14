@@ -16,15 +16,11 @@ export function FavoriteTeas() {
         </div>
       </div>
 
-      <div className="flex-grow shrink-0 px-8 pb-12 text-brown-primary">
+      <div className="flex-grow shrink-0 px-8 pb-12">
         {!_.isEmpty(types) && (
           <div className="space-y-12">
             {_.map(types, (type) => (
-              <TeaShelf
-                key={type}
-                type={type}
-                teas={teasByType[type]}
-              />
+              <TeaShelf key={type} type={type} teas={teasByType[type]} />
             ))}
           </div>
         )}

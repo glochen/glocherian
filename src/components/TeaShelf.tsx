@@ -15,7 +15,7 @@ export function TeaShelf({ type, teas }: TeaShelfProps) {
     <div className="flex flex-col gap-6">
       <div className="flex items-center gap-4">
         <div className="h-px bg-brown-tertiary flex-1"></div>
-        <h2 className="text-brown-primary text-lg tracking-wider">
+        <h2 className="text-ink-black text-lg tracking-wider">
           {_.lowerCase(type)}
         </h2>
         <div className="h-px bg-brown-tertiary flex-1"></div>
@@ -54,14 +54,14 @@ const TeaCup: React.FC<TeaCupProps> = ({
   onLeave,
 }) => {
   return (
-    <div 
+    <div
       className="relative flex flex-col gap-4 items-center cursor-pointer transition-all duration-300 ease-in-out"
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
       {/* Tea name and distributor */}
       <div className="space-y-2 text-center mb-2 transition-all duration-300">
-        <div className="text-brown-primary text-sm font-medium tracking-wide">
+        <div className="text-ink-black text-sm font-medium tracking-wide">
           {tea.name}
         </div>
         <div className="text-brown-secondary text-xs tracking-wider">

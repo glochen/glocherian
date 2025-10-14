@@ -49,7 +49,7 @@ export function FavoriteAdventures() {
       {/* Quote Section */}
       <div className="px-8 pb-8">
         <div className="max-w-4xl mx-auto text-center">
-          <blockquote className="text-brown-primary text-lg leading-relaxed italic font-light">
+          <blockquote className="text-brown-secondary text-lg leading-relaxed italic font-light">
             "climb the mountain not to plant your flag, but to embrace the
             challenge, enjoy the air and behold the view. climb it so you can
             see the world, not so the world can see you."

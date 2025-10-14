@@ -9,13 +9,15 @@ interface ChengyuScrollProps {
 }
 
 export function ChengyuScroll({ origin, chengyus }: ChengyuScrollProps) {
-  const [hoveredBannerIndex, setHoveredBannerIndex] = useState<number | null>(null);
+  const [hoveredBannerIndex, setHoveredBannerIndex] = useState<number | null>(
+    null
+  );
 
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center gap-4">
         <div className="h-px bg-brown-tertiary flex-1"></div>
-        <h2 className="text-brown-primary text-lg tracking-wider">
+        <h2 className="text-ink-black text-lg tracking-wider">
           {_.lowerCase(origin)}
         </h2>
         <div className="h-px bg-brown-tertiary flex-1"></div>

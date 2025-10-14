@@ -15,7 +15,7 @@ export function BookShelf({ genre, books }: BookShelfProps) {
     <div className="flex flex-col gap-6">
       <div className="flex items-center gap-4">
         <div className="h-px bg-brown-tertiary flex-1"></div>
-        <h2 className="text-brown-primary text-lg tracking-wider">
+        <h2 className="text-ink-black text-lg tracking-wider">
           {_.lowerCase(genre)}
         </h2>
         <div className="h-px bg-brown-tertiary flex-1"></div>
@@ -60,7 +60,7 @@ const BookSpine: React.FC<BookSpineProps> = ({
 
   // Dynamic width based on content
   const spineWidth =
-    totalLength > 35 ? (totalLength > 50 ? "w-16" : "w-12") : "w-10"; // Wider when split
+    totalLength > 32 ? (totalLength > 50 ? "w-18" : "w-14") : "w-10"; // Wider when split
 
   // Calculate flex behavior - only push the immediate next book spine (like nav bar)
   const isNextToHovered =
@@ -99,10 +99,10 @@ const BookSpine: React.FC<BookSpineProps> = ({
           {totalLength > 35 ? (
             <>
               {/* Split layout: title on top, author below */}
-              <div className="text-xs font-sans font-medium leading-tight text-center mb-1">
+              <div className="text-sm font-sans font-medium leading-tight text-center mb-1">
                 {book.title}
               </div>
-              <div className="text-xs font-sans leading-tight text-center opacity-90">
+              <div className="text-sm font-sans leading-tight text-center opacity-90">
                 {book.author}
               </div>
             </>
@@ -110,10 +110,10 @@ const BookSpine: React.FC<BookSpineProps> = ({
             <>
               {/* Single line layout */}
               <div className="leading-tight text-center">
-                <span className="text-xs font-sans font-medium leading-tight text-center mb-1">
+                <span className="text-sm font-sans font-medium leading-tight text-center mb-1">
                   {book.title}
                 </span>{" "}
-                <span className="text-xs font-sans leading-tight text-center opacity-90">
+                <span className="text-sm font-sans leading-tight text-center opacity-90">
                   {book.author}
                 </span>
               </div>

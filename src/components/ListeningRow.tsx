@@ -40,11 +40,11 @@ export function ListeningRow({
         {!isExpanded && (
           <div className="h-full flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <h4 className="text-sm font-medium text-brown-primary leading-tight truncate">
+              <h4 className="text-sm font-medium text-ink-black leading-tight truncate">
                 {item.name}
               </h4>
               <span className="text-brown-secondary">•</span>
-              <p className="text-xs text-brown-secondary truncate">
+              <p className="text-xs text-brown-primary truncate">
                 {item.artistOrPodcast}
               </p>
             </div>
@@ -61,11 +61,11 @@ export function ListeningRow({
             <div className="mb-2">
               <div className="flex flex-row items-center justify-between mb-1">
                 <div className="flex items-center gap-2">
-                  <h4 className="text-sm font-medium text-brown-primary leading-tight">
+                  <h4 className="text-sm font-medium text-ink-black leading-tight">
                     {item.name}
                   </h4>
                   <span className="text-brown-secondary">•</span>
-                  <p className="text-xs text-brown-secondary">
+                  <p className="text-xs text-brown-primary">
                     {item.artistOrPodcast}
                   </p>
                 </div>

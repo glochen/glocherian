@@ -46,7 +46,7 @@ export function AdventureColumn({ type, adventures }: AdventureColumnProps) {
     <div className="flex flex-col items-center gap-6">
       <div className="flex items-center gap-4">
         <TypeIcon size="sm" />
-        <h2 className="text-brown-primary text-lg tracking-wider font-medium">
+        <h2 className="text-ink-black text-lg tracking-wider font-medium">
           {_.lowerCase(type)}
         </h2>
       </div>
@@ -92,10 +92,10 @@ const AdventureMarker: React.FC<AdventureMarkerProps> = ({
     >
       {/* Adventure location and date */}
       <div className="space-y-2 text-center mb-2 transition-all duration-300">
-        <div className="text-brown-primary text-sm font-medium tracking-wide">
+        <div className="text-ink-black text-sm font-medium tracking-wide">
           {adventure.name} — {adventure.location}
         </div>
-        <div className="text-brown-secondary text-xs tracking-wider">
+        <div className="text-brown-primary text-xs tracking-wider">
           {adventure.date.month} {adventure.date.year}
         </div>
       </div>

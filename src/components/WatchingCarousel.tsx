@@ -27,7 +27,7 @@ export function WatchingCarousel({ title, items }: WatchingCarouselProps) {
 
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-medium text-brown-primary mb-4 px-2">{title}</h3>
+      <h3 className="text-lg font-medium text-ink-black mb-4 px-2">{title}</h3>
       <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
         {items.map((item, index) => (
           <WatchingItemCard
@@ -65,10 +65,10 @@ function WatchingItemCard({
         {!isExpanded && (
           <div className="h-full flex flex-col justify-between">
             <div>
-              <h4 className="text-sm font-medium text-brown-primary leading-tight mb-1">
+              <h4 className="text-sm font-medium text-ink-black leading-tight mb-1">
                 {item.title}
               </h4>
-              <p className="text-xs text-brown-secondary">
+              <p className="text-xs text-brown-primary">
                 {typeText[item.type]} • {providerText[item.provider]}
               </p>
             </div>
