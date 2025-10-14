@@ -15,6 +15,7 @@ import { CurrentWatchings } from "./pages/CurrentWatchings";
 import { CurrentListenings } from "./pages/CurrentListenings";
 import { FavoriteBooks } from "./pages/FavoriteBooks";
 import { FavoriteWatchings } from "./pages/FavoriteWatchings";
+import { FavoriteListenings } from "./pages/FavoriteListenings";
 
 export const pages = [
   {
@@ -59,10 +60,11 @@ export const pages = [
   },
   {
     id: "favorite-podcasts-songs",
+    pageComponent: (): JSX.Element => React.createElement(FavoriteListenings),
     icon: Listening,
-    englishDescription: "favorite podcasts/songs",
+    englishDescription: "favorite listenings",
     chineseDescription: "最喜歡的播客/歌曲",
-    title: "favorite podcasts & songs | glocherian",
+    title: "favorite listenings | glocherian",
   },
   {
     id: "favorite-chenyu's",

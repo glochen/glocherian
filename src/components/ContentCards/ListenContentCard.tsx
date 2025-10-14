@@ -1,12 +1,12 @@
-import { 
-  ListeningStatus, 
-  statusText, 
-  ListeningType, 
-  typeText, 
-  MusicGenre, 
-  musicGenreText, 
-  PodcastGenre, 
-  podcastGenreText 
+import {
+  ListeningStatus,
+  statusText,
+  ListeningType,
+  typeText,
+  MusicGenre,
+  musicGenreText,
+  PodcastGenre,
+  podcastGenreText,
 } from "../../data/listenings";
 import { H3 } from "../../design/Typography";
 import _ from "lodash";
@@ -49,18 +49,26 @@ export function ListenContentCard({
       dot: "bg-brown-tertiary",
       text: "text-brown-tertiary",
     },
+    [ListeningStatus.Favorite]: {
+      border: "content-card-border text-brown-secondary",
+      bg: "",
+      dot: "bg-brown-secondary",
+      text: "text-brown-secondary",
+    },
   };
 
   const currentStyle = statusStyles[status];
 
   return (
-    <div 
+    <div
       className={`${currentStyle.border} ${currentStyle.bg} p-6 ${className}`}
     >
       {/* Status Indicator */}
       <div className="flex items-center gap-2 mb-4">
         <div className={`w-1.5 h-1.5 rounded-full ${currentStyle.dot}`}></div>
-        <span className={`text-xs font-sans tracking-wide ${currentStyle.text}`}>
+        <span
+          className={`text-xs font-sans tracking-wide ${currentStyle.text}`}
+        >
           {statusText[status as ListeningStatus]}
         </span>
       </div>
@@ -72,18 +80,15 @@ export function ListenContentCard({
 
       {/* Artist/Host and Type */}
       <div className="flex items-center gap-2 mb-3">
-        <p className="text-ink-black font-sans text-sm">
-          {artistOrPodcast}
-        </p>
+        <p className="text-ink-black font-sans text-sm">{artistOrPodcast}</p>
         <span className="text-ink-black/60">•</span>
-        <p className="text-ink-black font-sans text-sm">
-          {typeText[type]}
-        </p>
+        <p className="text-ink-black font-sans text-sm">{typeText[type]}</p>
         {genre && (
           <>
             <span className="text-ink-black/60">•</span>
             <p className="text-ink-black font-sans text-sm">
-              {podcastGenreText[genre as PodcastGenre] ?? musicGenreText[genre as MusicGenre]}
+              {podcastGenreText[genre as PodcastGenre] ??
+                musicGenreText[genre as MusicGenre]}
             </p>
           </>
         )}

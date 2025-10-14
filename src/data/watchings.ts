@@ -453,6 +453,15 @@ export const favoriteWatchings: WatchingItem[] = [
     description:
       "anthology crime series following complex detectives and haunting investigations across decades.",
   },
+  {
+    title: "daughters",
+    type: WatchingType.Movie,
+    status: WatchingStatus.Favorite,
+    provider: Provider.Netflix,
+    genre: WatchingGenre.Documentary,
+    description:
+      "an emotional documentary following four girls preparing to reunite with their incarcerated fathers through a special father-daughter dance held in a washington, d.c. jail.",
+  },
 ];
 
 export const getWatchingsByStatus = (status: WatchingItem["status"]) => {
