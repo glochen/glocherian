@@ -5,31 +5,41 @@ import _ from "lodash";
 interface ChengyuBannerProps {
   chengyu: ChengyuItem;
   index: number;
-  isHovered: boolean;
+  isActive: boolean;
+  onInteraction: () => void;
   onHover: () => void;
   onLeave: () => void;
-  hoveredBannerIndex: number | null;
+  activeBannerIndex: number | null;
 }
 
 export const ChengyuBanner: React.FC<ChengyuBannerProps> = ({
   chengyu,
   index,
-  isHovered,
+  isActive,
+  onInteraction,
   onHover,
   onLeave,
-  hoveredBannerIndex,
+  activeBannerIndex,
 }) => {
   // Calculate if we need to push the next banner to the right
-  const isNextToHovered =
-    hoveredBannerIndex !== null && index === hoveredBannerIndex + 1;
+  const isNextToActive =
+    activeBannerIndex !== null && index === activeBannerIndex + 1;
 
   return (
     <div
       className={`relative transition-all duration-500 ease-in-out ${
-        isHovered ? "z-10" : "z-0"
-      } ${isNextToHovered ? "ml-[450px]" : ""}`}
+        isActive ? "z-10" : "z-0"
+      } ${isNextToActive ? "ml-[450px]" : ""}`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      onClick={(e) => {
+        e.stopPropagation();
+        onInteraction();
+      }}
+      onTouchEnd={(e) => {
+        e.stopPropagation();
+        onInteraction();
+      }}
     >
       {/* Chengyu Banner - Traditional Chinese scroll style */}
       <div
@@ -63,10 +73,10 @@ export const ChengyuBanner: React.FC<ChengyuBannerProps> = ({
         </div>
       </div>
 
-      {/* Hover card */}
+      {/* Content card */}
       <div
         className={`absolute top-0 left-full ml-3 z-20 transform transition-all duration-500 ease-in-out ${
-          isHovered ? "opacity-100 w-auto" : "opacity-0 w-0 overflow-hidden"
+          isActive ? "opacity-100 w-auto" : "opacity-0 w-0 overflow-hidden"
         }`}
         style={{ minWidth: "420px" }}
       >

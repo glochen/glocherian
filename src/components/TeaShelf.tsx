@@ -9,7 +9,7 @@ interface TeaShelfProps {
 }
 
 export function TeaShelf({ type, teas }: TeaShelfProps) {
-  const [hoveredTeaIndex, setHoveredTeaIndex] = useState<number | null>(null);
+  const [activeTeaIndex, setActiveTeaIndex] = useState<number | null>(null);
 
   return (
     <div className="flex flex-col gap-6">
@@ -27,10 +27,27 @@ export function TeaShelf({ type, teas }: TeaShelfProps) {
             key={tea.name}
             tea={tea}
             index={index}
-            isHovered={hoveredTeaIndex === index}
-            onHover={() => setHoveredTeaIndex(index)}
-            onLeave={() => setHoveredTeaIndex(null)}
-            hoveredTeaIndex={hoveredTeaIndex}
+            isActive={activeTeaIndex === index}
+            onInteraction={() => {
+              if (activeTeaIndex === index) {
+                setActiveTeaIndex(null); // Close if already open
+              } else {
+                setActiveTeaIndex(index); // Open new item
+              }
+            }}
+            onHover={() => {
+              // Only set on hover if no item is currently active (prevents mobile conflicts)
+              if (activeTeaIndex === null) {
+                setActiveTeaIndex(index);
+              }
+            }}
+            onLeave={() => {
+              // Only clear on leave if this item is currently active
+              if (activeTeaIndex === index) {
+                setActiveTeaIndex(null);
+              }
+            }}
+            activeTeaIndex={activeTeaIndex}
           />
         ))}
       </div>
@@ -41,15 +58,18 @@ export function TeaShelf({ type, teas }: TeaShelfProps) {
 interface TeaCupProps {
   tea: TeaItem;
   index: number;
-  isHovered: boolean;
+  isActive: boolean;
+  onInteraction: () => void;
   onHover: () => void;
   onLeave: () => void;
-  hoveredTeaIndex: number | null;
+  activeTeaIndex: number | null;
 }
 
 const TeaCup: React.FC<TeaCupProps> = ({
   tea,
-  isHovered,
+  index,
+  isActive,
+  onInteraction,
   onHover,
   onLeave,
 }) => {
@@ -58,6 +78,14 @@ const TeaCup: React.FC<TeaCupProps> = ({
       className="relative flex flex-col gap-4 items-center cursor-pointer transition-all duration-300 ease-in-out"
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      onClick={(e) => {
+        e.stopPropagation();
+        onInteraction();
+      }}
+      onTouchEnd={(e) => {
+        e.stopPropagation();
+        onInteraction();
+      }}
     >
       {/* Tea name and distributor */}
       <div className="space-y-2 text-center mb-2 transition-all duration-300">
@@ -72,8 +100,8 @@ const TeaCup: React.FC<TeaCupProps> = ({
       {/* Horizontal brush stroke */}
       <div className="brush-stroke-line w-16 h-0.5 transition-all duration-300"></div>
 
-      {/* Hover details */}
-      {isHovered && (
+      {/* Content details */}
+      {isActive && (
         <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 z-10 transition-all duration-300">
           <TeaContentCard
             name={tea.name}

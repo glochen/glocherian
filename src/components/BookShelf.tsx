@@ -9,7 +9,7 @@ interface BookShelfProps {
 }
 
 export function BookShelf({ genre, books }: BookShelfProps) {
-  const [hoveredBookIndex, setHoveredBookIndex] = useState<number | null>(null);
+  const [activeBookIndex, setActiveBookIndex] = useState<number | null>(null);
 
   return (
     <div className="flex flex-col gap-6">
@@ -27,10 +27,27 @@ export function BookShelf({ genre, books }: BookShelfProps) {
             key={book.title}
             book={book}
             index={index}
-            isHovered={hoveredBookIndex === index}
-            onHover={() => setHoveredBookIndex(index)}
-            onLeave={() => setHoveredBookIndex(null)}
-            hoveredBookIndex={hoveredBookIndex}
+            isActive={activeBookIndex === index}
+            onInteraction={() => {
+              if (activeBookIndex === index) {
+                setActiveBookIndex(null); // Close if already open
+              } else {
+                setActiveBookIndex(index); // Open new item
+              }
+            }}
+            onHover={() => {
+              // Only set on hover if no item is currently active (prevents mobile conflicts)
+              if (activeBookIndex === null) {
+                setActiveBookIndex(index);
+              }
+            }}
+            onLeave={() => {
+              // Only clear on leave if this item is currently active
+              if (activeBookIndex === index) {
+                setActiveBookIndex(null);
+              }
+            }}
+            activeBookIndex={activeBookIndex}
           />
         ))}
       </div>
@@ -41,19 +58,21 @@ export function BookShelf({ genre, books }: BookShelfProps) {
 interface BookSpineProps {
   book: ReadingItem;
   index: number;
-  isHovered: boolean;
+  isActive: boolean;
+  onInteraction: () => void;
   onHover: () => void;
   onLeave: () => void;
-  hoveredBookIndex: number | null;
+  activeBookIndex: number | null;
 }
 
 const BookSpine: React.FC<BookSpineProps> = ({
   book,
   index,
-  isHovered,
+  isActive,
+  onInteraction,
   onHover,
   onLeave,
-  hoveredBookIndex,
+  activeBookIndex,
 }) => {
   // Calculate if we need to split title and author
   const totalLength = _.size(book.title) + _.size(book.author);
@@ -63,16 +82,24 @@ const BookSpine: React.FC<BookSpineProps> = ({
     totalLength > 32 ? (totalLength > 50 ? "w-18" : "w-14") : "w-10"; // Wider when split
 
   // Calculate flex behavior - only push the immediate next book spine (like nav bar)
-  const isNextToHovered =
-    hoveredBookIndex !== null && index === hoveredBookIndex + 1;
+  const isNextToActive =
+    activeBookIndex !== null && index === activeBookIndex + 1;
 
   return (
     <div
       className={`relative transition-all duration-500 ease-in-out ${
-        isHovered ? "z-10" : "z-0"
-      } ${isNextToHovered ? "ml-[415px]" : ""}`}
+        isActive ? "z-10" : "z-0"
+      } ${isNextToActive ? "ml-[415px]" : ""}`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      onClick={(e) => {
+        e.stopPropagation();
+        onInteraction();
+      }}
+      onTouchEnd={(e) => {
+        e.stopPropagation();
+        onInteraction();
+      }}
     >
       {/* Book Spine - Brush stroke only, no background */}
       <div
@@ -124,7 +151,7 @@ const BookSpine: React.FC<BookSpineProps> = ({
 
       <div
         className={`absolute top-0 left-full ml-3 z-20 transform transition-all duration-500 ease-in-out ${
-          isHovered ? "opacity-100 w-auto" : "opacity-0 w-0 overflow-hidden"
+          isActive ? "opacity-100 w-auto" : "opacity-0 w-0 overflow-hidden"
         }`}
         style={{ minWidth: "400px" }}
       >
