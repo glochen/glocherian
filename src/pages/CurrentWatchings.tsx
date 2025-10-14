@@ -11,12 +11,11 @@ export function CurrentWatchings() {
   );
   const plannedWatchings = getWatchingsByStatus(WatchingStatus.Planned);
 
-
   return (
     <VerticalNavPageLayout>
       <div className="py-12 px-8">
         <div className="flex justify-center items-center">
-           <Film size="md" />
+          <Film size="md" />
         </div>
       </div>
 
@@ -31,6 +30,7 @@ export function CurrentWatchings() {
                 provider={watching.provider}
                 description={watching.description}
                 status={watching.status}
+                genre={watching.genre}
               />
             ))}
           </div>
@@ -44,6 +44,7 @@ export function CurrentWatchings() {
                 provider={watching.provider}
                 description={watching.description}
                 status={watching.status}
+                genre={watching.genre}
               />
             ))}
           </div>
@@ -57,6 +58,7 @@ export function CurrentWatchings() {
                 provider={watching.provider}
                 description={watching.description}
                 status={watching.status}
+                genre={watching.genre}
               />
             ))}
           </div>

@@ -14,6 +14,7 @@ import { CurrentReadings } from "./pages/CurrentReadings";
 import { CurrentWatchings } from "./pages/CurrentWatchings";
 import { CurrentListenings } from "./pages/CurrentListenings";
 import { FavoriteBooks } from "./pages/FavoriteBooks";
+import { FavoriteWatchings } from "./pages/FavoriteWatchings";
 
 export const pages = [
   {
@@ -49,11 +50,12 @@ export const pages = [
     title: "favorite books | glocherian",
   },
   {
-    id: "favorite-movies",
+    id: "favorite-watchings",
+    pageComponent: (): JSX.Element => React.createElement(FavoriteWatchings),
     icon: VideoCamera,
-    englishDescription: "favorite movies",
-    chineseDescription: "最喜歡的觀影",
-    title: "favorite movies | glocherian",
+    englishDescription: "favorite watchings",
+    chineseDescription: "最喜歡的電影/影集",
+    title: "favorite watchings | glocherian",
   },
   {
     id: "favorite-podcasts-songs",

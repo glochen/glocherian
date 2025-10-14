@@ -1,4 +1,4 @@
-import { ReadingItem, ReadingStatus } from "../data/books";
+import { ReadingItem } from "../data/books";
 import { BookContentCard } from "./ContentCards/BookContentCard";
 import _ from "lodash";
 import { useState } from "react";
@@ -79,7 +79,6 @@ const BookSpine: React.FC<BookSpineProps> = ({
         className={`
           ${spineWidth} h-64 relative cursor-pointer
           text-brown-secondary border-brown-secondary
-          hover:shadow-lg transition-all duration-200
         `}
         style={{
           writingMode: "vertical-rl",
@@ -135,7 +134,7 @@ const BookSpine: React.FC<BookSpineProps> = ({
           description={book.description}
           status={book.status}
           genre={book.genre}
-          className="shadow-xl bg-paper-white h-72 flex flex-col justify-between"
+          className="bg-paper-white h-72 flex flex-col justify-between"
         />
       </div>
     </div>
