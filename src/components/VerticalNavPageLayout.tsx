@@ -38,7 +38,7 @@ export function VerticalNavPageLayout({
         </Link>
 
         {/* Other pages */}
-        {_.map(pages, (page) => {
+        {_.map(_.filter(pages, (page) => page.id !== "about" && page.id !== "contact"), (page) => {
           const Icon = page.icon;
           const isCurrentPage = currentPageId === page.id;
 

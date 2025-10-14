@@ -47,7 +47,7 @@ export function AdventureColumn({ type, adventures }: AdventureColumnProps) {
       <div className="flex items-center gap-4">
         <TypeIcon size="sm" />
         <h2 className="text-brown-primary text-lg tracking-wider font-medium">
-          {_.startCase(type)}
+          {_.lowerCase(type)}
         </h2>
       </div>
       {/* Horizontal brush stroke */}
