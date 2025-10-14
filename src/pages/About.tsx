@@ -20,9 +20,9 @@ export function About() {
             <div className="flex-1 font-sans text-md bg-paper-white text-brown-secondary leading-relaxed">
               hi, i'm gloria
               <br /><br />
-              i'm currently based in the bay area but have lived in the seattle, the midwest, and virginia before
+              i'm currently based in the bay area but have lived in seattle, the midwest, and virginia before
               <br /><br />
-              i love being in the outdoors, reading, sewing, crocheting, sketching/painting, and currently relearning mandarin
+              i love being in the outdoors, reading, sewing, crocheting, sketching/painting, and i'm currently relearning mandarin
               <br /><br />    
               i'm always looking for new adventure and craft buddies, book/podcast recommendations, and people to practice my mandarin with
               <br /><br />
