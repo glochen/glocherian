@@ -6,3 +6,5 @@ export { currentListenings, getListeningsByStatus } from "./listenings";
 export type { ListeningItem } from "./listenings";
 export { favoriteChengyus, getChengyusByOrigin, ChengyuOrigin } from "./chengyus";
 export type { ChengyuItem } from "./chengyus";
+export { favoriteTeas, getTeasByType, getTeaTypes, TeaType } from "./teas";
+export type { TeaItem } from "./teas";

@@ -17,6 +17,7 @@ import { FavoriteBooks } from "./pages/FavoriteBooks";
 import { FavoriteWatchings } from "./pages/FavoriteWatchings";
 import { FavoriteListenings } from "./pages/FavoriteListenings";
 import { FavoriteChengyus } from "./pages/FavoriteChengyus";
+import { FavoriteTeas } from "./pages/FavoriteTeas";
 
 export const pages = [
   {
@@ -77,6 +78,7 @@ export const pages = [
   },
   {
     id: "favorite-teas",
+    pageComponent: (): JSX.Element => React.createElement(FavoriteTeas),
     icon: Teapot1,
     englishDescription: "favorite teas",
     chineseDescription: "最喜歡的茶",
