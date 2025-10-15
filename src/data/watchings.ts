@@ -88,7 +88,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Animation,
     description:
-      "an adult animated comedy-drama following the schwooper siblings as they jump through time—childhood to adulthood and back—exploring family bonds and memories.",
+      "an adult animated comedy-drama following the schwooper siblings as they jump through time—childhood to adulthood and back—exploring family bonds and memories",
   },
   {
     title: "great british baking show",
@@ -97,7 +97,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.RealityTV,
     description:
-      "a friendly, competitive baking show where amateur bakers face themed challenges to win the title of the uk baking champion (also known as the great british bake off).",
+      "a friendly, competitive baking show where amateur bakers face themed challenges to win the title of the uk baking champion (also known as the great british bake off)",
   },
   {
     title: "breaking bad",
@@ -106,7 +106,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Drama,
     description:
-      "a high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future.",
+      "a high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine to secure his family's future",
   },
   {
     title: "daughters",
@@ -115,7 +115,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Documentary,
     description:
-      "an emotional documentary following four girls preparing to reunite with their incarcerated fathers through a special father-daughter dance held in a washington, d.c. jail.",
+      "an emotional documentary following four girls preparing to reunite with their incarcerated fathers through a special father-daughter dance held in a washington, d.c. jail - so many sobs, uncontrollable sobs",
   },
   {
     title: "when life gives you tangerines",
@@ -124,7 +124,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.SliceOfLife,
     description:
-      "a korean romance / slice-of-life drama spanning decades, telling the story of ae-sun and gwan-sik's enduring love across time, set in jeju and beyond.",
+      "a korean romance / slice-of-life drama spanning decades, telling the story of ae-sun and gwan-sik's enduring love across time, set in jeju and beyond - so many tears, so many laughs, so many emotions",
   },
   {
     title: "squid game",
@@ -133,7 +133,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Dystopian,
     description:
-      "a dystopian thriller series where contestants compete in deadly children's games for a massive cash prize, exploring desperation, class struggle, and human morality.",
+      "a dystopian thriller series where contestants compete in deadly children's games for a massive cash prize, exploring desperation, class struggle, and human morality",
   },
   {
     title: "13th",
@@ -142,7 +142,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Documentary,
     description:
-      "a documentary by ava duvernay that examines the U.S. prison system and how the 13th amendment's exception clause has enabled the mass incarceration of african americans.",
+      "a documentary by ava duvernay that examines the U.S. prison system and how the 13th amendment's exception clause has enabled the mass incarceration of african americans",
   },
   {
     title: "loving",
@@ -151,7 +151,7 @@ export const currentWatchings: WatchingItem[] = [
     provider: Provider.Netflix, // assuming
     genre: WatchingGenre.Biography,
     description:
-      "a biographical drama about mildred and richard loving, whose interracial marriage led to the landmark U.S. supreme court case loving v. virginia (1967) that invalidated laws prohibiting interracial marriage.",
+      "a biographical drama about mildred and richard loving, whose interracial marriage led to the landmark U.S. supreme court case loving v. virginia (1967) that invalidated laws prohibiting interracial marriage",
   },
 ];
 
@@ -163,7 +163,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.AppleTV,
     genre: WatchingGenre.SciFi,
     description:
-      "mark scout leads a team of office workers whose memories have been surgically divided between their work and personal lives.",
+      "mark scout leads a team of office workers whose memories have been surgically divided between their work and personal lives - so many cliffhangers",
   },
   {
     title: "succession",
@@ -172,7 +172,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Drama,
     description:
-      "follows the roy family, the dysfunctional owners of a global media and hospitality empire.",
+      "follows the roy family, the dysfunctional owners of a global media and hospitality empire - intense to the max",
   },
   {
     title: "shōgun",
@@ -181,7 +181,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Drama,
     description:
-      "in feudal japan, a shipwrecked englishman becomes entangled in a deadly power struggle between rival warlords.",
+      "in feudal japan, a shipwrecked englishman becomes entangled in a deadly power struggle between rival warlords - so so intense, crazy mind games",
   },
   {
     title: "minding the gap",
@@ -190,7 +190,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Documentary,
     description:
-      "three young men bond through skateboarding as they confront volatile family dynamics and the challenges of adulthood.",
+      "three young men bond through skateboarding as they confront volatile family dynamics and the challenges of adulthood - was so hard to watch for me, relating to it was harder than i expected, possibly my favorite movie",
   },
   {
     title: "the last of us",
@@ -199,7 +199,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Dystopian,
     description:
-      "a hardened survivor and a teenage girl journey across a post-apocalyptic america ravaged by a fungal pandemic.",
+      "a hardened survivor and a teenage girl journey across a post-apocalyptic america ravaged by a fungal pandemic - thrilling",
   },
   {
     title: "law and order: svu",
@@ -208,7 +208,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Crime,
     description:
-      "detectives of the special victims unit investigate and seek justice for survivors of sexual and violent crimes in new york city.",
+      "detectives of the special victims unit investigate and seek justice for survivors of sexual and violent crimes in new york city - i've watched this like 5 times",
   },
   {
     title: "grave of the fireflies",
@@ -217,7 +217,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Animation,
     description:
-      "two siblings struggle to survive in japan during the final months of world war ii.",
+      "two siblings struggle to survive in japan during the final months of world war ii - heartbreaking",
   },
   {
     title: "nausicaä of the valley of the wind",
@@ -226,7 +226,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Fantasy,
     description:
-      "a compassionate princess fights to protect her post-apocalyptic world from war and ecological ruin.",
+      "a compassionate princess fights to protect her post-apocalyptic world from war and ecological ruin - empowering",
   },
   {
     title: "anatomy of a fall",
@@ -235,7 +235,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Mystery,
     description:
-      "a writer is put on trial after her husband's suspicious death at their remote mountain home.",
+      "a writer is put on trial after her husband's suspicious death at their remote mountain home - lots to think about, love this one",
   },
   {
     title: "how to train your dragon",
@@ -244,7 +244,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Peacock,
     genre: WatchingGenre.Animation,
     description:
-      "a young viking befriends a dragon and challenges his village’s long-held beliefs about the creatures.",
+      "a young viking befriends a dragon and challenges his village's long-held beliefs about the creatures - so fun",
   },
   {
     title: "spider-man: into the spider-verse",
@@ -253,7 +253,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Animation,
     description:
-      "teenager miles morales becomes the new spider-man and joins forces with heroes from parallel universes to save reality.",
+      "teenager miles morales becomes the new spider-man and joins forces with heroes from parallel universes to save reality - story and beats on point",
   },
   {
     title: "bojack horseman",
@@ -262,7 +262,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Comedy,
     description:
-      "a washed-up sitcom star who happens to be a horse navigates fame, depression, and self-destruction in hollywood.",
+      "a washed-up sitcom star who happens to be a horse navigates fame, depression, and self-destruction in hollywood - my god it's so good it's so real",
   },
   {
     title: "good will hunting",
@@ -271,7 +271,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Drama,
     description:
-      "a janitor at mit with a gift for mathematics struggles to find direction with the help of a therapist.",
+      "a janitor at mit with a gift for mathematics struggles to find direction with the help of a therapist - so wholesome",
   },
   {
     title: "marriage story",
@@ -280,7 +280,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Drama,
     description:
-      "a couple navigates the emotional and legal complexities of divorce while raising their young son.",
+      "a couple navigates the emotional and legal complexities of divorce while raising their young son - so real, i appreciated the realness so much",
   },
   {
     title: "lady bird",
@@ -289,7 +289,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Drama,
     description:
-      "a rebellious high school senior comes of age while clashing with her mother and dreaming of leaving her hometown.",
+      "a rebellious high school senior comes of age while clashing with her mother and dreaming of leaving her hometown - a really real coming of age, lots of relatability",
   },
   {
     title: "little women",
@@ -298,7 +298,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.AmazonPrime,
     genre: WatchingGenre.Drama,
     description:
-      "four sisters grow up during the american civil war, finding love, identity, and independence.",
+      "four sisters grow up during the american civil war, finding love, identity, and independence - powerful, just as powerful as the book",
   },
   {
     title: "on the basis of sex",
@@ -307,16 +307,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Biography,
     description:
-      "a young ruth bader ginsburg takes on a groundbreaking case to challenge gender discrimination in the u.s. legal system.",
-  },
-  {
-    title: "the joy luck club",
-    type: WatchingType.Movie,
-    status: WatchingStatus.Favorite,
-    provider: Provider.HBO,
-    genre: WatchingGenre.Drama,
-    description:
-      "four chinese-american women reflect on their relationships with their immigrant mothers and shared histories.",
+      "a young ruth bader ginsburg takes on a groundbreaking case to challenge gender discrimination in the u.s. legal system - so empowering",
   },
   {
     title: "eternal sunshine of the spotless mind",
@@ -325,7 +316,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Romance,
     description:
-      "a couple undergoes a procedure to erase memories of each other, only to rediscover their love.",
+      "a couple undergoes a procedure to erase memories of each other, only to rediscover their love - real, raw, gets you thinking",
   },
   {
     title: "princess mononoke",
@@ -334,7 +325,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Fantasy,
     description:
-      "a young warrior becomes entangled in a battle between forest spirits and human industry.",
+      "a young warrior becomes entangled in a battle between forest spirits and human industry - fun, adventurous, powerful",
   },
   {
     title: "howl's moving castle",
@@ -343,7 +334,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Fantasy,
     description:
-      "a young woman cursed by a witch finds refuge in a wizard’s moving castle and learns about love and war.",
+      "a young woman cursed by a witch finds refuge in a wizard's moving castle and learns about love and war - mystically fun",
   },
   {
     title: "the penguin",
@@ -352,7 +343,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Crime,
     description:
-      "following the events of 'the batman,' oswald cobblepot rises through gotham’s criminal underworld.",
+      "following the events of 'the batman,' oswald cobblepot rises through gotham's criminal underworld - chilling, emotional, agh",
   },
   {
     title: "game of thrones",
@@ -361,7 +352,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Fantasy,
     description:
-      "noble families vie for power in the brutal and politically complex realm of westeros.",
+      "noble families vie for power in the brutal and politically complex realm of westeros - a classic favorite",
   },
   {
     title: "house of the dragon",
@@ -370,7 +361,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Fantasy,
     description:
-      "set centuries before game of thrones, it chronicles the downfall of house targaryen.",
+      "set centuries before game of thrones, it chronicles the downfall of house targaryen - addicting",
   },
   {
     title: "the bear",
@@ -379,7 +370,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Drama,
     description:
-      "a fine-dining chef returns to run his family's sandwich shop in chicago and struggles to transform it.",
+      "a fine-dining chef returns to run his family's sandwich shop in chicago and struggles to transform it - intense, non stop to the max",
   },
   {
     title: "chef's table",
@@ -388,7 +379,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Documentary,
     description:
-      "an intimate look into the lives, philosophies, and artistry of world-renowned chefs.",
+      "an intimate look into the lives, philosophies, and artistry of world-renowned chefs - eye opening, so much learning",
   },
   {
     title: "how to with john wilson",
@@ -397,7 +388,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Documentary,
     description:
-      "a filmmaker awkwardly navigates new york life while offering self-deprecating commentary and unexpected insight.",
+      "a filmmaker awkwardly navigates new york life while offering self-deprecating commentary and unexpected insight - wholesome in the best awkward kind of way",
   },
   {
     title: "chernobyl",
@@ -406,7 +397,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.History,
     description:
-      "a dramatization of the catastrophic nuclear disaster and the human cost of its cover-up.",
+      "a dramatization of the catastrophic nuclear disaster and the human cost of its cover-up - intense my goodness",
   },
   {
     title: "the white lotus",
@@ -415,7 +406,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Comedy,
     description:
-      "wealthy guests and resort staff navigate absurd tensions and dark secrets at a luxury vacation spot.",
+      "wealthy guests and resort staff navigate absurd tensions and dark secrets at a luxury vacation spot - so dramatic",
   },
   {
     title: "the substance",
@@ -424,7 +415,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Hulu,
     genre: WatchingGenre.Horror,
     description:
-      "a fading celebrity uses a mysterious product promising rejuvenation, only to face horrifying consequences.",
+      "a fading celebrity uses a mysterious product promising rejuvenation, only to face horrifying consequences - eeeek this one was intense",
   },
   {
     title: "bridge to terabithia",
@@ -433,7 +424,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.DisneyPlus,
     genre: WatchingGenre.Fantasy,
     description:
-      "two friends create a magical kingdom in the woods to escape their struggles and discover friendship and loss.",
+      "two friends create a magical kingdom in the woods to escape their struggles and discover friendship and loss - holds up to this day",
   },
   {
     title: "the parent trap",
@@ -442,7 +433,16 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.DisneyPlus,
     genre: WatchingGenre.Comedy,
     description:
-      "identical twins separated at birth meet at camp and plot to reunite their divorced parents.",
+      "identical twins separated at birth meet at camp and plot to reunite their divorced parents - an absolute childhood favorite",
+  },
+  {
+    title: "the amazing panda adventure",
+    type: WatchingType.Movie,
+    status: WatchingStatus.Favorite,
+    provider: Provider.HBO,
+    genre: WatchingGenre.Action,
+    description:
+      "a young boy journeys through china's misty mountains to help save an endangered panda — my absolute favorite childhood movie",
   },
   {
     title: "true detective",
@@ -451,7 +451,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.HBO,
     genre: WatchingGenre.Crime,
     description:
-      "anthology crime series following complex detectives and haunting investigations across decades.",
+      "anthology crime series following complex detectives and haunting investigations across decades - could not stop watching",
   },
   {
     title: "daughters",
@@ -460,7 +460,7 @@ export const favoriteWatchings: WatchingItem[] = [
     provider: Provider.Netflix,
     genre: WatchingGenre.Documentary,
     description:
-      "an emotional documentary following four girls preparing to reunite with their incarcerated fathers through a special father-daughter dance held in a washington, d.c. jail.",
+      "an emotional documentary following four girls preparing to reunite with their incarcerated fathers through a special father-daughter dance held in a washington, d.c. jail - so many sobs, uncontrollable sobs",
   },
 ];
 

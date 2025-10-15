@@ -92,7 +92,7 @@ export const currentListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Listening,
     description:
-      'a mandarin pop ballad whose title translates to "we drifted apart as we walked." it expresses the quiet heartbreak of love fading over time.',
+      'a mandarin pop ballad whose title translates to "we drifted apart as we walked" it expresses the quiet heartbreak of love fading over time',
     genre: MusicGenre.Pop,
   },
   {
@@ -101,7 +101,7 @@ export const currentListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Listening,
     description:
-      "a dreamy, mellow rock track from the australian band ocean alley, blending psychedelic and surf rock elements with soulful vocals.",
+      "a dreamy, mellow rock track, blending psychedelic and surf rock elements with soulful vocals",
     genre: MusicGenre.Rock,
   },
   {
@@ -110,7 +110,7 @@ export const currentListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.RecentlyCompleted,
     description:
-      "a collection of stories about the confusion, freedom, and identity shifts that come with college life and early adulthood.",
+      "a collection of stories about navigating college with the current events including dei barred and visa's being denied at higher rates",
     genre: PodcastGenre.Storytelling,
   },
   {
@@ -118,27 +118,17 @@ export const currentListenings: ListeningItem[] = [
     artistOrPodcast: "philosophize this!",
     type: ListeningType.Podcast,
     status: ListeningStatus.Planned,
-    description:
-      "upcoming episodes focusing on simone weil's philosophy of attention, suffering, and spirituality, bridging ethics and mysticism.",
+    description: "upcoming episodes focusing on simone weil's philosophy",
     genre: PodcastGenre.Philosophy,
   },
   {
     name: "jason reynolds - the antidote to hopelessness",
     artistOrPodcast: "ted radio hour",
     type: ListeningType.Podcast,
-    status: ListeningStatus.RecentlyCompleted,
+    status: ListeningStatus.Planned,
     description:
-      "author jason reynolds reflects on creativity, hope, and resilience as tools to combat despair and inspire connection.",
+      "author jason reynolds reflects on creativity, hope, and resilience as tools to combat despair and inspire connection",
     genre: PodcastGenre.Interview,
-  },
-  {
-    name: "glacier national park",
-    artistOrPodcast: "field trip",
-    type: ListeningType.Podcast,
-    status: ListeningStatus.RecentlyCompleted,
-    description:
-      "an immersive exploration of glacier national park's natural beauty, history, and ecosystems, blending storytelling and environmental science.",
-    genre: PodcastGenre.Science,
   },
   {
     name: "found in translation",
@@ -146,7 +136,7 @@ export const currentListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.RecentlyCompleted,
     description:
-      "explores how translation—of language, ideas, and experiences—shapes empathy, connection, and understanding across cultures.",
+      "explores how translation beyond language shapes empathy, connection, and understanding across cultures",
     genre: PodcastGenre.Storytelling,
   },
 ];
@@ -159,17 +149,8 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a mandarin pop ballad whose title translates to 'we drifted apart as we walked,' expressing the quiet heartbreak of love fading over time.",
+      "a mandarin pop ballad whose title translates to 'we drifted apart as we walked,' expressing the quiet heartbreak of love fading over time",
     genre: MusicGenre.Pop,
-  },
-  {
-    name: "first blush",
-    artistOrPodcast: "ocean alley",
-    type: ListeningType.Song,
-    status: ListeningStatus.Favorite,
-    description:
-      "a dreamy, mellow rock track from australian band ocean alley, blending psychedelic and surf rock elements with soulful vocals.",
-    genre: MusicGenre.Rock,
   },
   {
     name: "the night we met",
@@ -177,7 +158,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a melancholic folk song that explores themes of nostalgia and the impossibility of returning to past moments.",
+      "a melancholic folk song that explores themes of nostalgia and the impossibility of returning to past moments",
     genre: MusicGenre.Folk,
   },
   {
@@ -186,7 +167,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a shimmering electronic track that layers glitchy beats and warm synths to evoke a sense of rising anticipation.",
+      "a shimmering electronic track that layers glitchy beats and warm synths to evoke a sense of rising anticipation",
     genre: MusicGenre.Electronic,
   },
   {
@@ -195,7 +176,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a tender pop ballad about self-worth and finding strength in oneself after love and loss.",
+      "a tender pop ballad about self-worth and finding strength in oneself after love and loss",
     genre: MusicGenre.Pop,
   },
   {
@@ -204,7 +185,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a haunting, ethereal song exploring inner turmoil and emotional transformation through aurora's signature layered vocals.",
+      "a haunting, ethereal song exploring inner turmoil and emotional transformation through aurora's signature layered vocals",
     genre: MusicGenre.Alternative,
   },
   {
@@ -213,7 +194,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "an introspective lo-fi hip-hop track reflecting on detachment, healing, and letting go.",
+      "an introspective lo-fi hip-hop track reflecting on detachment, healing, and letting go",
     genre: MusicGenre.Indie,
   },
   {
@@ -230,7 +211,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a poetic spoken-word and soul fusion that contemplates vulnerability, masculinity, and emotional honesty.",
+      "a poetic spoken-word and soul fusion that contemplates vulnerability, masculinity, and emotional honesty",
     genre: MusicGenre.Alternative,
   },
   {
@@ -239,7 +220,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a chill indie-electronic track blending gentle beats and wistful melodies with a nostalgic undertone.",
+      "a chill indie-electronic track blending gentle beats and wistful melodies with a nostalgic undertone",
     genre: MusicGenre.Indie,
   },
   {
@@ -248,7 +229,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a funky, minimalist groove showcasing vulfpeck's signature bass-driven sound and playful introspection.",
+      "a funky, minimalist groove showcasing vulfpeck's signature bass-driven sound and playful introspection",
     genre: MusicGenre.Jazz,
   },
   {
@@ -257,17 +238,8 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a nostalgic electronic piece that builds emotional tension through airy vocals and cinematic soundscapes.",
+      "a nostalgic electronic piece that builds emotional tension through airy vocals and cinematic soundscapes",
     genre: MusicGenre.Electronic,
-  },
-  {
-    name: "wings in the sky.",
-    artistOrPodcast: "jev",
-    type: ListeningType.Song,
-    status: ListeningStatus.Favorite,
-    description:
-      "a lo-fi ambient song that evokes weightlessness and quiet reflection through layered vocals and minimal production.",
-    genre: MusicGenre.Ambient,
   },
   {
     name: "october snow",
@@ -275,7 +247,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a delicate indie pop song about change, impermanence, and the beauty of fleeting moments.",
+      "a delicate indie pop song about change, impermanence, and the beauty of fleeting moments",
     genre: MusicGenre.Indie,
   },
   {
@@ -284,7 +256,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "an intimate acoustic track reflecting on love, distance, and the wish to understand another person's inner world.",
+      "an intimate acoustic track reflecting on love, distance, and the wish to understand another person's inner world",
     genre: MusicGenre.Folk,
   },
   {
@@ -293,7 +265,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a bittersweet indie rock tune combining jangly guitars with nostalgic, confessional lyrics.",
+      "a bittersweet indie rock tune combining jangly guitars with nostalgic, confessional lyrics",
     genre: MusicGenre.Indie,
   },
   {
@@ -302,7 +274,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "an emotive electronic track blending field recordings, vocal loops, and introspective ambience.",
+      "an emotive electronic track blending field recordings, vocal loops, and introspective ambience",
     genre: MusicGenre.Electronic,
   },
   {
@@ -311,7 +283,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a soft folk song about confusion and tenderness, carried by delicate guitar and hushed vocals.",
+      "a soft folk song about confusion and tenderness, carried by delicate guitar and hushed vocals",
     genre: MusicGenre.Folk,
   },
   {
@@ -320,17 +292,8 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a gentle indie-folk song exploring vulnerability and self-acceptance with dreamy intimacy.",
+      "a gentle indie-folk song exploring vulnerability and self-acceptance with dreamy intimacy",
     genre: MusicGenre.Folk,
-  },
-  {
-    name: "my kind of woman",
-    artistOrPodcast: "mac demarco",
-    type: ListeningType.Song,
-    status: ListeningStatus.Favorite,
-    description:
-      "a lo-fi love song filled with hazy synths and nostalgic charm, typical of mac demarco's mellow sound.",
-    genre: MusicGenre.Indie,
   },
   {
     name: "你是我最深愛的人",
@@ -338,7 +301,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a mandarin indie ballad expressing enduring devotion and quiet emotional depth.",
+      "a mandarin indie ballad expressing enduring devotion and quiet emotional depth",
     genre: MusicGenre.Pop,
   },
   {
@@ -347,7 +310,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "an ethereal, melancholic pop ballad about vulnerability and holding onto hope amid heartbreak.",
+      "an ethereal, melancholic pop ballad about vulnerability and holding onto hope amid heartbreak",
     genre: MusicGenre.Pop,
   },
   {
@@ -356,7 +319,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a gentle, introspective track where lauv writes a letter to his younger self, reflecting on self-doubt, healing, and acceptance.",
+      "a gentle, introspective track where lauv writes a letter to his younger self, reflecting on self-doubt, healing, and acceptance",
     genre: MusicGenre.Pop,
   },
   {
@@ -365,7 +328,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a raw and nostalgic song about realizing adulthood doesn’t fix everything—just changes how you understand your parents and pain.",
+      "a raw and nostalgic song about changing of how you understand your parents and pain",
     genre: MusicGenre.Indie,
   },
   {
@@ -374,7 +337,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a synth-pop reflection on digital disconnection and loneliness, using the metaphor of living like characters in a simulation.",
+      "a synth-pop reflection on digital disconnection and loneliness, using the metaphor of living like characters in a simulation",
     genre: MusicGenre.Pop,
   },
   {
@@ -383,7 +346,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a tender piano ballad about unspoken love and the quiet ache of letting someone go while still wishing them well.",
+      "a tender piano ballad about unspoken love and the quiet ache of letting someone go while still wishing them well",
     genre: MusicGenre.Pop,
   },
   {
@@ -392,7 +355,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a warm, acoustic love song that captures the intimacy of small moments and the simplicity of affection.",
+      "a warm, acoustic love song that captures the intimacy of small moments and the simplicity of affection",
     genre: MusicGenre.Folk,
   },
   {
@@ -401,7 +364,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a haunting and poetic track about mortality, grief, and the tenderness of saying goodbye to a loved one.",
+      "a haunting and poetic track about mortality, grief, and the tenderness of saying goodbye to a loved one",
     genre: MusicGenre.Indie,
   },
   {
@@ -410,7 +373,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a delicate indie pop ballad filled with yearning, regret, and the beauty of missed connections.",
+      "a delicate indie pop ballad filled with yearning, regret, and the beauty of missed connections",
     genre: MusicGenre.Indie,
   },
   {
@@ -419,7 +382,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "an emotional hip-hop track addressing suicide prevention and the power of empathy, inspired by the national lifeline number.",
+      "an emotional hip-hop track addressing suicide prevention and the power of empathy, inspired by the national lifeline number",
     genre: MusicGenre.HipHop,
   },
   {
@@ -428,7 +391,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "an iconic storytelling ballad set in a bar, blending harmonica, piano, and the loneliness of everyday dreamers.",
+      "an iconic storytelling ballad set in a bar, blending harmonica, piano, and the loneliness of everyday dreamers",
     genre: MusicGenre.Rock,
   },
   {
@@ -437,7 +400,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a heartfelt rap addressed to eminem’s daughter, expressing love, guilt, and the struggle of parenthood under fame.",
+      "a heartfelt rap addressed to eminem's daughter, expressing love, guilt, and the struggle of parenthood under fame",
     genre: MusicGenre.HipHop,
   },
   {
@@ -446,7 +409,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a soaring indie anthem about heartbreak and longing, balancing vulnerability with cathartic melody.",
+      "a soaring indie anthem about heartbreak and longing, balancing vulnerability with cathartic melody",
     genre: MusicGenre.Rock,
   },
   {
@@ -455,7 +418,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Song,
     status: ListeningStatus.Favorite,
     description:
-      "a soulful rap-rock collaboration about redemption, inner demons, and finding grace in brokenness.",
+      "a soulful rap-rock collaboration about redemption, inner demons, and finding grace in brokenness",
     genre: MusicGenre.HipHop,
   },
 
@@ -466,7 +429,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "a series of episodes introducing the frankfurt school thinkers—adorno, horkheimer, marcuse—and their critiques of culture, capitalism, and modernity.",
+      "a series of episodes introducing the frankfurt school thinkers—adorno, horkheimer, marcuse—and their critiques of culture, capitalism, and modernity",
     genre: PodcastGenre.Philosophy,
   },
   {
@@ -475,7 +438,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "explores existentialist philosophy through the works of sartre, camus, and simone de beauvoir, examining freedom, absurdity, and moral responsibility.",
+      "explores existentialist philosophy through the works of sartre, camus, and simone de beauvoir, examining freedom, absurdity, and moral responsibility",
     genre: PodcastGenre.Philosophy,
   },
   {
@@ -484,7 +447,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "connects zen buddhist philosophy to byung-chul han's reflections on stillness, burnout, and the modern condition.",
+      "connects zen buddhist philosophy to byung-chul han's reflections on stillness, burnout, and the modern condition",
     genre: PodcastGenre.Philosophy,
   },
   {
@@ -493,7 +456,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "examines the social and cultural divides between generations and explores how empathy and dialogue can bridge them.",
+      "examines the social and cultural divides between generations and explores how empathy and dialogue can bridge them",
     genre: PodcastGenre.Storytelling,
   },
   {
@@ -502,7 +465,16 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "a sensory exploration of yosemite's natural soundscapes, combining field recordings with reflections on conservation and awe.",
+      "a powerful exploration of yosemite's history - emphasizing the struggle between native americans who were displaced and the government",
+    genre: PodcastGenre.Science,
+  },
+  {
+    name: "glacier national park",
+    artistOrPodcast: "field trip",
+    type: ListeningType.Podcast,
+    status: ListeningStatus.Favorite,
+    description:
+      "a powerful exploration of glacier's history - emphasizing the struggle between native americans who were displaced and the government",
     genre: PodcastGenre.Science,
   },
   {
@@ -511,7 +483,7 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "an episode exploring the design, history, and community of west oakland—revealing how architecture, infrastructure, and resilience shape the city's identity.",
+      "an episode exploring the design, history, and community of west oakland—revealing how architecture, infrastructure, and resilience shape the city's struggle and identity",
     genre: PodcastGenre.Storytelling,
   },
   {
@@ -520,16 +492,16 @@ export const favoriteListenings: ListeningItem[] = [
     type: ListeningType.Podcast,
     status: ListeningStatus.Favorite,
     description:
-      "a segment exploring human health and the body's hidden workings, reflecting on illness and empathy through the lens of respiratory viruses.",
+      "a segment exploring human health and the body's hidden workings, reflecting on illness and empathy through the lens of respiratory viruses",
     genre: PodcastGenre.Science,
   },
   {
     name: "found in translation",
     artistOrPodcast: "ted radio hour",
     type: ListeningType.Podcast,
-    status: ListeningStatus.RecentlyCompleted,
+    status: ListeningStatus.Favorite,
     description:
-      "explores how translation—of language, ideas, and experiences—shapes empathy, connection, and understanding across cultures.",
+      "explores how translation beyond language shapes empathy, connection, and understanding across cultures",
     genre: PodcastGenre.Storytelling,
   },
 ];
