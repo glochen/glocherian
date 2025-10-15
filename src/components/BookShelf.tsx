@@ -28,24 +28,11 @@ export function BookShelf({ genre, books }: BookShelfProps) {
             book={book}
             index={index}
             isActive={activeBookIndex === index}
-            onInteraction={() => {
-              if (activeBookIndex === index) {
-                setActiveBookIndex(null); // Close if already open
-              } else {
-                setActiveBookIndex(index); // Open new item
-              }
-            }}
             onHover={() => {
-              // Only set on hover if no item is currently active (prevents mobile conflicts)
-              if (activeBookIndex === null) {
-                setActiveBookIndex(index);
-              }
+              setActiveBookIndex(index);
             }}
             onLeave={() => {
-              // Only clear on leave if this item is currently active
-              if (activeBookIndex === index) {
-                setActiveBookIndex(null);
-              }
+              setActiveBookIndex(null);
             }}
             activeBookIndex={activeBookIndex}
           />
@@ -59,7 +46,6 @@ interface BookSpineProps {
   book: ReadingItem;
   index: number;
   isActive: boolean;
-  onInteraction: () => void;
   onHover: () => void;
   onLeave: () => void;
   activeBookIndex: number | null;
@@ -69,7 +55,6 @@ const BookSpine: React.FC<BookSpineProps> = ({
   book,
   index,
   isActive,
-  onInteraction,
   onHover,
   onLeave,
   activeBookIndex,
@@ -89,17 +74,9 @@ const BookSpine: React.FC<BookSpineProps> = ({
     <div
       className={`relative transition-all duration-500 ease-in-out ${
         isActive ? "z-10" : "z-0"
-      } ${isNextToActive ? "ml-[415px]" : ""}`}
+      } ${isNextToActive ? "ml-[315px]" : ""}`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
-      onClick={(e) => {
-        e.stopPropagation();
-        onInteraction();
-      }}
-      onTouchEnd={(e) => {
-        e.stopPropagation();
-        onInteraction();
-      }}
     >
       {/* Book Spine - Brush stroke only, no background */}
       <div
@@ -113,57 +90,58 @@ const BookSpine: React.FC<BookSpineProps> = ({
           transform: "rotate(180deg)",
         }}
       >
-        {/* Brush stroke borders using existing CSS classes - only left and right borders */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Left brush stroke */}
-          <div className="absolute left-0 top-0 bottom-0 w-0.5 brush-stroke-line-vertical opacity-80"></div>
-          {/* Right brush stroke */}
-          <div className="absolute right-0 top-0 bottom-0 w-0.5 brush-stroke-line-vertical opacity-80"></div>
-        </div>
+        {!isActive && (
+          <>
+            {/* Brush stroke borders using existing CSS classes - only left and right borders */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Left brush stroke */}
+              <div className="absolute left-0 top-0 bottom-0 w-0.5 brush-stroke-line-vertical opacity-80"></div>
+              {/* Right brush stroke */}
+              <div className="absolute right-0 top-0 bottom-0 w-0.5 brush-stroke-line-vertical opacity-80"></div>
+            </div>
 
-        {/* Text content */}
-        <div className="flex flex-col items-center justify-center h-full px-2 py-3 text-ink-black">
-          {totalLength > 35 ? (
-            <>
-              {/* Split layout: title on top, author below */}
-              <div className="text-sm font-sans font-medium leading-tight text-center mb-1">
-                {book.title}
-              </div>
-              <div className="text-sm font-sans leading-tight text-center opacity-90">
-                {book.author}
-              </div>
-            </>
-          ) : (
-            <>
-              {/* Single line layout */}
-              <div className="leading-tight text-center">
-                <span className="text-sm font-sans font-medium leading-tight text-center mb-1">
-                  {book.title}
-                </span>{" "}
-                <span className="text-sm font-sans leading-tight text-center opacity-90">
-                  {book.author}
-                </span>
-              </div>
-            </>
-          )}
-        </div>
+            {/* Text content */}
+            <div className="flex flex-col items-center justify-center h-full px-2 py-3 text-ink-black">
+              {totalLength > 35 ? (
+                <>
+                  {/* Split layout: title on top, author below */}
+                  <div className="text-sm font-sans font-medium leading-tight text-center mb-1">
+                    {book.title}
+                  </div>
+                  <div className="text-sm font-sans leading-tight text-center opacity-90">
+                    {book.author}
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* Single line layout */}
+                  <div className="leading-tight text-center">
+                    <span className="text-sm font-sans font-medium leading-tight text-center mb-1">
+                      {book.title}
+                    </span>{" "}
+                    <span className="text-sm font-sans leading-tight text-center opacity-90">
+                      {book.author}
+                    </span>
+                  </div>
+                </>
+              )}
+            </div>
+          </>
+        )}
       </div>
 
-      <div
-        className={`absolute top-0 left-full ml-3 z-20 transform transition-all duration-500 ease-in-out ${
-          isActive ? "opacity-100 w-auto" : "opacity-0 w-0 overflow-hidden"
-        }`}
-        style={{ minWidth: "400px" }}
-      >
-        <BookContentCard
-          title={book.title}
-          author={book.author}
-          description={book.description}
-          status={book.status}
-          genre={book.genre}
-          className="bg-paper-white h-72 flex flex-col justify-between"
-        />
-      </div>
+      {isActive && (
+        <div className="absolute top-0 left-0 w-80 z-20">
+          <BookContentCard
+            title={book.title}
+            author={book.author}
+            description={book.description}
+            status={book.status}
+            genre={book.genre}
+            className="bg-paper-white h-64 flex flex-col justify-between content-card-border"
+          />
+        </div>
+      )}
     </div>
   );
 };

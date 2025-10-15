@@ -30,24 +30,11 @@ export function ChengyuScroll({ origin, chengyus }: ChengyuScrollProps) {
             chengyu={chengyu}
             index={index}
             isActive={activeBannerIndex === index}
-            onInteraction={() => {
-              if (activeBannerIndex === index) {
-                setActiveBannerIndex(null); // Close if already open
-              } else {
-                setActiveBannerIndex(index); // Open new item
-              }
-            }}
             onHover={() => {
-              // Only set on hover if no item is currently active (prevents mobile conflicts)
-              if (activeBannerIndex === null) {
-                setActiveBannerIndex(index);
-              }
+              setActiveBannerIndex(index);
             }}
             onLeave={() => {
-              // Only clear on leave if this item is currently active
-              if (activeBannerIndex === index) {
-                setActiveBannerIndex(null);
-              }
+              setActiveBannerIndex(null);
             }}
             activeBannerIndex={activeBannerIndex}
           />

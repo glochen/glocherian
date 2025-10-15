@@ -26,15 +26,7 @@ export function TeaShelf({ type, teas }: TeaShelfProps) {
           <TeaCup
             key={tea.name}
             tea={tea}
-            index={index}
             isActive={activeTeaIndex === index}
-            onInteraction={() => {
-              if (activeTeaIndex === index) {
-                setActiveTeaIndex(null); // Close if already open
-              } else {
-                setActiveTeaIndex(index); // Open new item
-              }
-            }}
             onHover={() => {
               // Only set on hover if no item is currently active (prevents mobile conflicts)
               if (activeTeaIndex === null) {
@@ -47,7 +39,6 @@ export function TeaShelf({ type, teas }: TeaShelfProps) {
                 setActiveTeaIndex(null);
               }
             }}
-            activeTeaIndex={activeTeaIndex}
           />
         ))}
       </div>
@@ -57,35 +48,17 @@ export function TeaShelf({ type, teas }: TeaShelfProps) {
 
 interface TeaCupProps {
   tea: TeaItem;
-  index: number;
   isActive: boolean;
-  onInteraction: () => void;
   onHover: () => void;
   onLeave: () => void;
-  activeTeaIndex: number | null;
 }
 
-const TeaCup: React.FC<TeaCupProps> = ({
-  tea,
-  index,
-  isActive,
-  onInteraction,
-  onHover,
-  onLeave,
-}) => {
+const TeaCup: React.FC<TeaCupProps> = ({ tea, isActive, onHover, onLeave }) => {
   return (
     <div
       className="relative flex flex-col gap-4 items-center cursor-pointer transition-all duration-300 ease-in-out"
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
-      onClick={(e) => {
-        e.stopPropagation();
-        onInteraction();
-      }}
-      onTouchEnd={(e) => {
-        e.stopPropagation();
-        onInteraction();
-      }}
     >
       {/* Tea name and distributor */}
       <div className="space-y-2 text-center mb-2 transition-all duration-300">

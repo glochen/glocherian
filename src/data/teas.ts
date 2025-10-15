@@ -24,7 +24,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "lucas teas",
     type: TeaType.Green,
     description:
-      "made by a japanese tea master, this tea is an excellent example of a superb genmai — superiorly roasted rice perfectly blends with high end bancha giving a smooth finish.", // from Lucas Teas page :contentReference[oaicite:0]{index=0}
+      "made by a japanese tea master, this tea is an excellent example of a superb genmai — superiorly roasted rice perfectly blends with high end bancha giving a smooth finish", // from Lucas Teas page :contentReference[oaicite:0]{index=0}
     origin: "",
   },
   {
@@ -32,7 +32,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "lucas teas",
     type: TeaType.Black,
     description:
-      "a treat for dessert lovers — coconut and chocolate are blended with black tea for a delicious cup; excellent with a splash of steamed milk and sweetener.", // from Lucas Teas product description
+      "a treat for dessert lovers — coconut and chocolate are blended with black tea for a delicious cup; excellent with a splash of steamed milk and sweetener", // from Lucas Teas product description
     origin: "",
   },
   {
@@ -40,7 +40,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "tokyo futon & tea",
     type: TeaType.Black,
     description:
-      "a fragrant black tea infused with sweet, floral lychee essence.",
+      "a fragrant black tea infused with sweet, floral lychee essence",
     origin: "",
   },
   {
@@ -48,7 +48,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "song tea",
     type: TeaType.Oolong,
     description:
-      "unsprayed light charcoal roasted oolong from taiwan with notes of magnolia x alba, cantaloupe, and pistachio gelato.", // from Song Tea page :contentReference[oaicite:1]{index=1}
+      "unsprayed light charcoal roasted oolong from taiwan with notes of magnolia x alba, cantaloupe, and pistachio gelato", // from Song Tea page :contentReference[oaicite:1]{index=1}
     origin: "taiwan",
   },
   {
@@ -56,7 +56,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "song tea",
     type: TeaType.White,
     description:
-      "a wild-harvested white tea with gentle woodiness and floral sweetness.", // approximated — I couldn't find a detailed description via the pages I saw
+      "a wild-harvested white tea with gentle woodiness and floral sweetness", // approximated — I couldn't find a detailed description via the pages I saw
     origin: "fujian",
   },
   {
@@ -64,7 +64,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "song tea",
     type: TeaType.Black,
     description:
-      "a red tea with a rich aromatic base layered with a longan charcoal-roasted finish; notes of grenadine, peony and golden raspberry.", // from Steepster review :contentReference[oaicite:2]{index=2}
+      "a red tea with a rich aromatic base layered with a longan charcoal-roasted finish; notes of grenadine, peony and golden raspberry", // from Steepster review :contentReference[oaicite:2]{index=2}
     origin: "taiwan",
   },
   {
@@ -72,7 +72,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "lucas teas",
     type: TeaType.Herbal,
     description:
-      "a vibrant herbal infusion of apple, hibiscus, and citrus — naturally caffeine-free.",
+      "a vibrant herbal infusion of apple, hibiscus, and citrus — naturally caffeine-free",
     origin: "",
   },
   {
@@ -80,7 +80,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "miro tea",
     type: TeaType.Oolong,
     description:
-      "a fruity blend of oolong, schizandra berries, rosehips, hibiscus and dried strawberries — simultaneously tart and sweet with a complex, penetrating aroma.", // from Miro Tea page :contentReference[oaicite:3]{index=3}
+      "a fruity blend of oolong, schizandra berries, rosehips, hibiscus and dried strawberries — simultaneously tart and sweet with a complex, penetrating aroma", // from Miro Tea page :contentReference[oaicite:3]{index=3}
     origin: "",
   },
   {
@@ -88,7 +88,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "miro tea",
     type: TeaType.Herbal,
     description:
-      "a rooibos-based herbal blend with green tea tones and tropical brightness.",
+      "a rooibos-based herbal blend with green tea tones and tropical brightness",
     origin: "south africa",
   },
   {
@@ -96,7 +96,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "miro tea",
     type: TeaType.PuErh,
     description:
-      "a deep, earthy puerh blended with chrysanthemum for mellow floral balance.",
+      "a deep, earthy puerh blended with chrysanthemum for mellow floral balance",
     origin: "mangfei, china",
   },
   {
@@ -104,7 +104,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "chakumi",
     type: TeaType.Green,
     description:
-      "a refreshing japanese green tea accented with bright citrus peel.",
+      "a refreshing japanese green tea accented with bright citrus peel",
     origin: "kanagawa, japan",
   },
   {
@@ -112,7 +112,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "siid cha",
     type: TeaType.Oolong,
     description:
-      "a delicately scented taiwanese oolong infused with lychee hydrosol.",
+      "a delicately scented taiwanese oolong infused with lychee hydrosol",
     origin: "nantou, taiwan",
   },
 ];
