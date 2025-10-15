@@ -91,21 +91,22 @@ const AdventureMarker: React.FC<AdventureMarkerProps> = ({
       onMouseLeave={onLeave}
     >
       {/* Adventure location and date */}
-      <div className="space-y-2 text-center mb-2 transition-all duration-300">
-        <div className="text-ink-black text-sm font-medium tracking-wide">
-          {adventure.name} — {adventure.location}
+      {!isHovered && (
+        <div className="space-y-2 text-center mb-2 transition-all duration-300">
+          <div className="text-ink-black text-sm font-medium tracking-wide">
+            {adventure.name} — {adventure.location}
+          </div>
+          <div className="text-brown-primary text-xs tracking-wider">
+            {adventure.date.month} {adventure.date.year}
+          </div>
         </div>
-        <div className="text-brown-primary text-xs tracking-wider">
-          {adventure.date.month} {adventure.date.year}
-        </div>
-      </div>
+      )}
 
       {/* Hover details */}
       {isHovered && (
-        <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 z-10 transition-all duration-300">
+        <div className="space-y-2 text-center mb-2 transition-all duration-300">
           <AdventureContentCard
             description={adventure.description}
-            className="min-w-80 max-w-96"
           />
         </div>
       )}
