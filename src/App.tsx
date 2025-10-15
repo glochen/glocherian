@@ -12,7 +12,7 @@ import _ from "lodash";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/glocherian">
       <AppRoutes />
     </Router>
   );
