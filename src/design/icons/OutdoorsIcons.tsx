@@ -6,7 +6,7 @@ import { IconProps, iconSizes } from './types';
 const createIcon = (name: string, alt: string) => {
   return ({ size = 'md', ...props }: IconProps) => {
     const folder = iconSizes[size].folder;
-    return <BaseIcon src={`/${folder}/outdoors/png/${name}.png`} alt={alt} size={size} {...props} />;
+    return <BaseIcon src={`${process.env.PUBLIC_URL}/${folder}/outdoors/png/${name}.png`} alt={alt} size={size} {...props} />;
   };
 };
 

@@ -28,7 +28,7 @@ export function VerticalNavPageLayout({
           }`}
         >
           <img
-            src="/chinese_seal.png"
+            src={`${process.env.PUBLIC_URL}/chinese_seal.png`}
             alt="Chinese seal - Home"
             className="h-12 sm:h-20"
           />
