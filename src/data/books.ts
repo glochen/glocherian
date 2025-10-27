@@ -54,7 +54,7 @@ export const currentReadings: ReadingItem[] = [
     author: "frank herbert",
     description:
       'a sci-fi novel about the political, ecological, and religious conflict over the desert planet arrakis',
-    status: ReadingStatus.Reading,
+    status: ReadingStatus.RecentlyCompleted,
     genre: BookGenre.ScienceFiction,
   },
   {
@@ -88,14 +88,6 @@ export const currentReadings: ReadingItem[] = [
       "a raw novel set in east oakland, following a young black woman navigating poverty, exploitation, and survival in a city pulsing with both struggle and resilience",
     status: ReadingStatus.RecentlyCompleted,
     genre: BookGenre.LiteraryFiction,
-  },
-  {
-    title: "fourth wing",
-    author: "rebecca yarros",
-    description:
-      "a smutty fantasy novel with dragons and mystical elements",
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.Fantasy,
   },
   {
     title: "never let me go",

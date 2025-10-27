@@ -84,7 +84,7 @@ export const currentWatchings: WatchingItem[] = [
   {
     title: "long story short",
     type: WatchingType.TVShow,
-    status: WatchingStatus.Watching,
+    status: WatchingStatus.RecentlyCompleted,
     provider: Provider.Netflix,
     genre: WatchingGenre.Animation,
     description:
