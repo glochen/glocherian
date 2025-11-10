@@ -50,14 +50,6 @@ export const currentReadings: ReadingItem[] = [
     genre: BookGenre.Philosophy,
   },
   {
-    title: "dune",
-    author: "frank herbert",
-    description:
-      'a sci-fi novel about the political, ecological, and religious conflict over the desert planet arrakis',
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.ScienceFiction,
-  },
-  {
     title: "the second sex",
     author: "simone de beauvoir",
     description:
@@ -66,12 +58,28 @@ export const currentReadings: ReadingItem[] = [
     genre: BookGenre.Philosophy,
   },
   {
+    title: "the wind-up bird chronicle",
+    author: "haruki murakami",
+    description:
+      "a surreal, multilayered novel combining mystery, metaphysical elements, and psychological introspection. the story follows toru okada as he searches for his missing wife and uncovers strange forces at work",
+    status: ReadingStatus.Reading,
+    genre: BookGenre.LiteraryFiction,
+  },
+  {
     title: "black skin, white masks",
     author: "frantz fanon",
     description:
       "an analysis of the psychological effects of colonization and racism on black identity, exploring how black people internalize the perspectives and expectations of the colonizer",
-    status: ReadingStatus.Reading,
+    status: ReadingStatus.RecentlyCompleted,
     genre: BookGenre.Philosophy,
+  },
+  {
+    title: "dune",
+    author: "frank herbert",
+    description:
+      'a sci-fi novel about the political, ecological, and religious conflict over the desert planet arrakis',
+    status: ReadingStatus.RecentlyCompleted,
+    genre: BookGenre.ScienceFiction,
   },
   {
     title: "white fragility",
@@ -104,14 +112,6 @@ export const currentReadings: ReadingItem[] = [
       "ai weiwei chronicles his life and that of his father, poet ai qing, against the backdrop of modern chinese history — exile, political repression, art, and resistance",
     status: ReadingStatus.Planned,
     genre: BookGenre.Memoir,
-  },
-  {
-    title: "the wind-up bird chronicle",
-    author: "haruki murakami",
-    description:
-      "a surreal, multilayered novel combining mystery, metaphysical elements, and psychological introspection. the story follows toru okada as he searches for his missing wife and uncovers strange forces at work",
-    status: ReadingStatus.Planned,
-    genre: BookGenre.LiteraryFiction,
   },
   {
     title: "how to say babylon",

@@ -462,6 +462,15 @@ export const favoriteWatchings: WatchingItem[] = [
     description:
       "an emotional documentary following four girls preparing to reunite with their incarcerated fathers through a special father-daughter dance held in a washington, d.c. jail - so many sobs, uncontrollable sobs",
   },
+  {
+    title: "the wild robot",
+    type: WatchingType.Movie,
+    status: WatchingStatus.Favorite,
+    provider: Provider.Netflix,
+    genre: WatchingGenre.Action,
+    description:
+      "a robot awakens alone on a remote island and learns to survive and connect with the animals around her – a heartwarming tale of nature, growth, and belonging",
+  },
 ];
 
 export const getWatchingsByStatus = (status: WatchingItem["status"]) => {

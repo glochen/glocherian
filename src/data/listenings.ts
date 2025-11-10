@@ -139,6 +139,24 @@ export const currentListenings: ListeningItem[] = [
       "explores how translation beyond language shapes empathy, connection, and understanding across cultures",
     genre: PodcastGenre.Storytelling,
   },
+  {
+    name: "ep: what we'll eat on a warmer planet",
+    artistOrPodcast: "TED Radio Hour",
+    type: ListeningType.Podcast,
+    status: ListeningStatus.RecentlyCompleted,
+    description:
+      "a TED Radio Hour episode exploring how climate change is transforming what and how we eat — from resilient crops to sustainable food innovations",
+    genre: PodcastGenre.Science,
+  },
+  {
+    name: "ep: the chinese exclusion act",
+    artistOrPodcast: "Civics 101",
+    type: ListeningType.Podcast,
+    status: ListeningStatus.RecentlyCompleted,
+    description:
+      "an episode examining the history and legacy of the Chinese Exclusion Act — the first significant U.S. law restricting immigration based on nationality, and its lasting impact on citizenship and identity",
+    genre: PodcastGenre.History,
+  },
 ];
 
 export const favoriteListenings: ListeningItem[] = [
@@ -503,6 +521,15 @@ export const favoriteListenings: ListeningItem[] = [
     description:
       "explores how translation beyond language shapes empathy, connection, and understanding across cultures",
     genre: PodcastGenre.Storytelling,
+  },
+  {
+    name: "ep: what we'll eat on a warmer planet",
+    artistOrPodcast: "TED Radio Hour",
+    type: ListeningType.Podcast,
+    status: ListeningStatus.Favorite,
+    description:
+      "a TED Radio Hour episode exploring how climate change is transforming what and how we eat — from resilient crops to sustainable food innovations",
+    genre: PodcastGenre.Science,
   },
 ];
 

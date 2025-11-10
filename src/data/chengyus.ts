@@ -133,6 +133,55 @@ export const favoriteChengyus: ChengyuItem[] = [
       "mencius first used this to criticise approaches that ignores natural principles, describing the image of trying to catch fish by climbing trees, representing the idea of pursuing an impossible goal through a flawed method",
     origin: ChengyuOrigin.Mencius,
   },
+  {
+    chengyu: "知足常樂",
+    literalTranslation: ["know", "enough", "constant", "happiness"],
+    meaning:
+      "to be content with what one has is to always be happy; happiness comes from contentment rather than endless desire",
+    origin: ChengyuOrigin.HanDynasty,
+  },
+  {
+    chengyu: "待人熱情",
+    literalTranslation: ["treat", "people", "warmly"],
+    meaning:
+      "to treat others with warmth and enthusiasm; to be kind-hearted and hospitable toward people",
+    origin: ChengyuOrigin.SongDynasty,
+  },
+  {
+    chengyu: "心地善良",
+    literalTranslation: ["heart", "ground", "kind", "good"],
+    meaning:
+      "to have a kind and good nature; to be compassionate and well-intentioned in dealing with others",
+    origin: ChengyuOrigin.HanDynasty,
+  },
+  {
+    chengyu: "殺雞取卵",
+    literalTranslation: ["kill", "chicken", "take", "egg"],
+    meaning:
+      "to kill the chicken to get the egg; to sacrifice long-term benefits for short-term gain, destroying the source of ongoing profit",
+    origin: ChengyuOrigin.HanDynasty,
+  },
+  {
+    chengyu: "愛不釋手",
+    literalTranslation: ["love", "not", "release", "hand"],
+    meaning:
+      "to be so fond of something that one cannot put it down; to be deeply attached to or enamored with an object or person",
+    origin: ChengyuOrigin.SongDynasty,
+  },
+  {
+    chengyu: "愛毛反裘",
+    literalTranslation: ["love", "fur", "turn inside-out", "fur coat"],
+    meaning:
+      "to love the fur but wear the coat inside out; to value outward appearance while neglecting inner worth — used to criticize misplaced priorities or superficiality",
+    origin: ChengyuOrigin.StrategiesOfTheWarringStates,
+  },
+  {
+    chengyu: "安步當車",
+    literalTranslation: ["peaceful", "walking", "substitutes", "carriage"],
+    meaning:
+      "to choose to walk over riding in a carriage; to live simply and contentedly without luxury or haste",
+    origin: ChengyuOrigin.HanDynasty,
+  },
 ];
 
 export const getChengyusByOrigin = (): Record<ChengyuOrigin, ChengyuItem[]> => {
