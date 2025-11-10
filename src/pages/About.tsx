@@ -40,7 +40,7 @@ export function About() {
             </div>
 
             {/* Right Side Brush Stroke */}
-            <div className="lg:w-2 lg:h-96 flex-shrink-0">
+            <div className="w-2 h-96 lg:w-2 lg:h-96 flex-shrink-0">
               <div className="about-brush-stroke-right"></div>
             </div>
           </div>
