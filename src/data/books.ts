@@ -40,89 +40,6 @@ export interface ReadingItem {
   genre?: BookGenre;
 }
 
-export const currentReadings: ReadingItem[] = [
-  {
-    title: "the ethics of ambiguity",
-    author: "simone de beauvoir",
-    description:
-      "an existentialist work outlining how freedom, responsibility, and ambiguity form the basis of an ethical life. de beauvoir argues that morality must be created through individual choice rather than absolute values",
-    status: ReadingStatus.Reading,
-    genre: BookGenre.Philosophy,
-  },
-  {
-    title: "the second sex",
-    author: "simone de beauvoir",
-    description:
-      'a foundational feminist text analyzing the history, biology, myth, and lived experience of women, and exploring how women have been positioned as the "other" in patriarchal societies',
-    status: ReadingStatus.Reading,
-    genre: BookGenre.Philosophy,
-  },
-  {
-    title: "the wind-up bird chronicle",
-    author: "haruki murakami",
-    description:
-      "a surreal, multilayered novel combining mystery, metaphysical elements, and psychological introspection. the story follows toru okada as he searches for his missing wife and uncovers strange forces at work",
-    status: ReadingStatus.Reading,
-    genre: BookGenre.LiteraryFiction,
-  },
-  {
-    title: "black skin, white masks",
-    author: "frantz fanon",
-    description:
-      "an analysis of the psychological effects of colonization and racism on black identity, exploring how black people internalize the perspectives and expectations of the colonizer",
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.Philosophy,
-  },
-  {
-    title: "dune",
-    author: "frank herbert",
-    description:
-      'a sci-fi novel about the political, ecological, and religious conflict over the desert planet arrakis',
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.ScienceFiction,
-  },
-  {
-    title: "white fragility",
-    author: "robin diangelo",
-    description:
-      "explores how white people often react defensively when challenged on racial issues, and how that defensiveness perpetuates systemic racism",
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.NonFiction,
-  },
-  {
-    title: "nightcrawling",
-    author: "leigh bardugo",
-    description:
-      "a raw novel set in east oakland, following a young black woman navigating poverty, exploitation, and survival in a city pulsing with both struggle and resilience",
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.LiteraryFiction,
-  },
-  {
-    title: "never let me go",
-    author: "kazuo ishiguro",
-    description:
-      "a dystopian novel about children at a secluded boarding school who slowly come to realize the disturbing purpose of their existence and the nature of their fates",
-    status: ReadingStatus.RecentlyCompleted,
-    genre: BookGenre.LiteraryFiction,
-  },
-  {
-    title: "1000 years of joys and sorrows: a memoir",
-    author: "ai weiwei",
-    description:
-      "ai weiwei chronicles his life and that of his father, poet ai qing, against the backdrop of modern chinese history — exile, political repression, art, and resistance",
-    status: ReadingStatus.Planned,
-    genre: BookGenre.Memoir,
-  },
-  {
-    title: "how to say babylon",
-    author: "safiya sinclair",
-    description:
-      "a poetic memoir of sinclair's upbringing in jamaica under a strict rastafarian father, exploring themes of trauma, identity, language, and liberation",
-    status: ReadingStatus.Planned,
-    genre: BookGenre.Memoir,
-  },
-];
-
 export const favoriteBooks: ReadingItem[] = [
   {
     title: "how to hide an empire",
@@ -453,10 +370,3 @@ export const favoriteBooks: ReadingItem[] = [
     genre: BookGenre.NonFiction,
   },
 ];
-
-export const getReadingsByStatus = (status: ReadingItem["status"]) => {
-  return _.filter(
-    currentReadings,
-    (reading: ReadingItem) => reading.status === status
-  );
-};

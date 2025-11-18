@@ -1,0 +1,153 @@
+.gr_custom_container_1763495787 {
+  padding: 10px 5px 10px 20px;
+  background-color: #FFFBF0;
+  color: #141414;
+}
+.gr_custom_container_1763495787 * {
+  color: #141414 !important;
+}
+.books-wrapper-1763495787.content-card-border::before {
+  background: linear-gradient(
+    180deg,
+    #4e7fa3 0%,
+    #4e7fa3 35%,
+    transparent 100%
+  ) !important;
+}
+.gr_custom_header_1763495787 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 150%;
+}
+.gr_custom_each_container_1763495787 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #aaa;
+}
+.gr_custom_book_container_1763495787 {
+  overflow: hidden;
+  height: 60px;
+  float: left;
+  margin-right: 4px;
+  width: 39px;
+}
+.gr_custom_author_1763495787 {
+  font-size: 10px;
+}
+.gr_custom_tags_1763495787 {
+  font-size: 10px;
+  color: gray;
+}
+.gr_custom_rating_1763495787 {
+  float: right;
+}
+.gr_custom_container_1763495800 {
+  padding: 10px 5px 10px 20px;
+  background-color: #FFFBF0;
+  color: #141414;
+}
+.gr_custom_container_1763495800 * {
+  color: #141414 !important;
+}
+.books-wrapper-1763495800.content-card-border::before {
+  background: linear-gradient(
+    180deg,
+    #611D0F 0%,
+    #611D0F 35%,
+    transparent 100%
+  ) !important;
+}
+.gr_custom_header_1763495800 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 150%;
+}
+.gr_custom_each_container_1763495800 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #aaa;
+}
+.gr_custom_book_container_1763495800 {
+  overflow: hidden;
+  height: 60px;
+  float: left;
+  margin-right: 4px;
+  width: 39px;
+}
+.gr_custom_author_1763495800 {
+  font-size: 10px;
+}
+.gr_custom_tags_1763495800 {
+  font-size: 10px;
+  color: gray;
+}
+.gr_custom_rating_1763495800 {
+  float: right;
+}
+.gr_custom_container_1763496095 {
+  padding: 10px 5px 10px 20px;
+  background-color: #FFFBF0;
+  color: #141414;
+}
+.gr_custom_container_1763496095 * {
+  color: #141414 !important;
+}
+.books-wrapper-1763496095.content-card-border::before {
+  background: linear-gradient(
+    180deg,
+    #DFD3B5 0%,
+    #DFD3B5 35%,
+    transparent 100%
+  ) !important;
+}
+.gr_custom_header_1763496095 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 150%;
+}
+.gr_custom_each_container_1763496095 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #aaa;
+}
+.gr_custom_book_container_1763496095 {
+  overflow: hidden;
+  height: 60px;
+  float: left;
+  margin-right: 4px;
+  width: 39px;
+}
+.gr_custom_author_1763496095 {
+  font-size: 10px;
+}
+.gr_custom_tags_1763496095 {
+  font-size: 10px;
+  color: gray;
+}
+.gr_custom_rating_1763496095 {
+  float: right;
+}
+/* Hide Goodreads logo */
+.gr_custom_container_1763495787 img[alt="goodreads.com"],
+.gr_custom_container_1763495800 img[alt="goodreads.com"],
+.gr_custom_container_1763496095 img[alt="goodreads.com"] {
+  display: none;
+}
+.gr_custom_container_1763495787 > div[style*="text-align: center"],
+.gr_custom_container_1763495800 > div[style*="text-align: center"],
+.gr_custom_container_1763496095 > div[style*="text-align: center"] {
+  display: none;
+}
+
