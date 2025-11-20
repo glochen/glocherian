@@ -20,6 +20,7 @@ import { useState } from "react";
 
 export function FavoriteAdventures() {
   const [selectedType, setSelectedType] = useState<AdventureType | "all">("all");
+  const [showFilters, setShowFilters] = useState(true);
   const types = getAdventureTypes(favoriteAdventures);
 
   // Sort adventures by date (most recent first)
@@ -120,40 +121,53 @@ export function FavoriteAdventures() {
 
           {/* Filter Buttons - Right Side Column */}
           <div className="flex flex-col items-end gap-3 shrink-0 sticky top-8 self-start">
+            {/* Toggle Button */}
             <button
-              onClick={() => setSelectedType("all")}
-              className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
-                selectedType === "all"
-                  ? "bg-blue-tertiary text-ink-black"
-                  : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
-              }`}
+              onClick={() => setShowFilters(!showFilters)}
+              className="px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50 mb-2"
             >
-              all
+              {showFilters ? "hide filters" : "show filters"}
             </button>
-            {_.map(types, (type) => {
-              const TypeIcon = getAdventureIcon(type);
-              return (
+
+            {/* Filter Buttons */}
+            {showFilters && (
+              <div className="flex flex-col items-end gap-3 transition-all duration-200">
                 <button
-                  key={type}
-                  onClick={() => setSelectedType(type)}
-                  className={`group relative px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 flex items-center gap-2 ${
-                    selectedType === type
+                  onClick={() => setSelectedType("all")}
+                  className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
+                    selectedType === "all"
                       ? "bg-blue-tertiary text-ink-black"
                       : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
                   }`}
                 >
-                  <TypeIcon size="sm" className="flex-shrink-0" />
-                  <span className="relative">
-                    <span className="group-hover:opacity-0 transition-opacity duration-200 inline-block whitespace-nowrap">
-                      {_.lowerCase(type)}
-                    </span>
-                    <span className="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-                      {getAdventureTypeChinese(type)}
-                    </span>
-                  </span>
+                  all
                 </button>
-              );
-            })}
+                {_.map(types, (type) => {
+                  const TypeIcon = getAdventureIcon(type);
+                  return (
+                    <button
+                      key={type}
+                      onClick={() => setSelectedType(type)}
+                      className={`group relative px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 flex items-center gap-2 ${
+                        selectedType === type
+                          ? "bg-blue-tertiary text-ink-black"
+                          : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
+                      }`}
+                    >
+                      <TypeIcon size="sm" className="flex-shrink-0" />
+                      <span className="relative">
+                        <span className="group-hover:opacity-0 transition-opacity duration-200 inline-block whitespace-nowrap">
+                          {_.lowerCase(type)}
+                        </span>
+                        <span className="absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                          {getAdventureTypeChinese(type)}
+                        </span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

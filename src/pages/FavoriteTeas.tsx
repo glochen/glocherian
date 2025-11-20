@@ -8,6 +8,7 @@ import { TeaType } from "../data/teas";
 
 export function FavoriteTeas() {
   const [selectedType, setSelectedType] = useState<TeaType | "all">("all");
+  const [showFilters, setShowFilters] = useState(true);
   const types = getTeaTypes(favoriteTeas);
   const sortedTeas = _.sortBy(favoriteTeas, "name");
   
@@ -25,37 +26,49 @@ export function FavoriteTeas() {
       </div>
 
       <div className="flex-grow shrink-0 px-8 pb-12">
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 sticky top-8 z-10 bg-paper-white py-2 -mx-2 px-2">
+        {/* Toggle Button */}
+        <div className="flex justify-center mb-4 sticky top-8 z-10 bg-paper-white py-2 -mx-2 px-2">
           <button
-            onClick={() => setSelectedType("all")}
-            className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
-              selectedType === "all"
-                ? "bg-brown-primary text-paper-white"
-                : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
-            }`}
+            onClick={() => setShowFilters(!showFilters)}
+            className="px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
           >
-            all
+            {showFilters ? "hide filters" : "show filters"}
           </button>
-          {_.map(types, (type) => (
+        </div>
+
+        {/* Filter Buttons */}
+        {showFilters && (
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-8 sticky top-20 z-10 bg-paper-white py-2 -mx-2 px-2 transition-all duration-200">
             <button
-              key={type}
-              onClick={() => setSelectedType(type)}
-              className={`group relative px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
-                selectedType === type
+              onClick={() => setSelectedType("all")}
+              className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
+                selectedType === "all"
                   ? "bg-brown-primary text-paper-white"
                   : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
               }`}
             >
-              <span className="group-hover:opacity-0 transition-opacity duration-200">
-                {_.lowerCase(type)}
-              </span>
-              <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                {getTeaTypeChinese(type)}
-              </span>
+              all
             </button>
-          ))}
-        </div>
+            {_.map(types, (type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedType(type)}
+                className={`group relative px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
+                  selectedType === type
+                    ? "bg-brown-primary text-paper-white"
+                    : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
+                }`}
+              >
+                <span className="group-hover:opacity-0 transition-opacity duration-200">
+                  {_.lowerCase(type)}
+                </span>
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  {getTeaTypeChinese(type)}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Tea Cards Grid */}
         {!_.isEmpty(filteredTeas) ? (
