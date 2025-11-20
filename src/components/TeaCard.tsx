@@ -6,9 +6,8 @@ interface TeaCardProps {
 }
 
 export function TeaCard({ tea }: TeaCardProps) {
-
   return (
-    <div className="content-card-border text-brown-secondary bg-paper-white rounded-lg p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
+    <div className="content-card-border text-brown-primary bg-paper-white rounded-lg p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
       {/* Tea Type Badge */}
       <div className="flex items-start justify-between gap-3">
         <span
