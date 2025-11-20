@@ -1,14 +1,18 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { AdventureColumn } from "../components/AdventureColumn";
+import { AdventureCard } from "../components/AdventureCard";
 import {
   favoriteAdventures,
-  getAdventuresByType,
   getAdventureTypes,
+  AdventureType,
 } from "../data/adventures";
 import { Bear } from "../design/icons/OutdoorsIcons";
 import _ from "lodash";
+import { useState } from "react";
 
 export function FavoriteAdventures() {
+  const [selectedType, setSelectedType] = useState<AdventureType | "all">("all");
+  const types = getAdventureTypes(favoriteAdventures);
+
   // Sort adventures by date (most recent first)
   const sortedAdventures = _.sortBy(favoriteAdventures, (adventure) => {
     const year = adventure.date.year;
@@ -35,8 +39,11 @@ export function FavoriteAdventures() {
     return -(year * 12 + monthNum); // Negative for reverse order (most recent first)
   });
 
-  const adventuresByType = getAdventuresByType(sortedAdventures);
-  const types = getAdventureTypes(sortedAdventures);
+  // Filter adventures by selected type
+  const filteredAdventures =
+    selectedType === "all"
+      ? sortedAdventures
+      : _.filter(sortedAdventures, (adventure) => adventure.type === selectedType);
 
   return (
     <VerticalNavPageLayout>
@@ -60,16 +67,49 @@ export function FavoriteAdventures() {
         </div>
       </div>
 
-      <div className="flex-grow shrink-0 px-8 pb-8">
-        {!_.isEmpty(types) && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {_.map(types, (type) => (
-              <AdventureColumn
-                key={type}
-                type={type}
-                adventures={adventuresByType[type]}
+      <div className="flex-grow shrink-0 px-8 pb-12">
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+          <button
+            onClick={() => setSelectedType("all")}
+            className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
+              selectedType === "all"
+                ? "bg-brown-primary text-paper-white"
+                : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
+            }`}
+          >
+            all
+          </button>
+          {_.map(types, (type) => (
+            <button
+              key={type}
+              onClick={() => setSelectedType(type)}
+              className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
+                selectedType === type
+                  ? "bg-brown-primary text-paper-white"
+                  : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
+              }`}
+            >
+              {_.lowerCase(type)}
+            </button>
+          ))}
+        </div>
+
+        {/* Adventure Cards Grid */}
+        {!_.isEmpty(filteredAdventures) ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {_.map(filteredAdventures, (adventure) => (
+              <AdventureCard
+                key={`${adventure.name}-${adventure.location}-${adventure.date.month}-${adventure.date.year}`}
+                adventure={adventure}
               />
             ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-brown-secondary text-sm font-sans">
+              No adventures found in this category.
+            </p>
           </div>
         )}
       </div>
