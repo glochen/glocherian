@@ -297,3 +297,15 @@ export const getAdventureTypes = (
     )
   );
 };
+
+export const getAdventureTypeChinese = (type: AdventureType): string => {
+  const chineseMap: Record<AdventureType, string> = {
+    [AdventureType.Biking]: "騎行",
+    [AdventureType.Climbing]: "攀岩",
+    [AdventureType.Skiing]: "滑雪",
+    [AdventureType.Backpacking]: "背包旅行",
+    [AdventureType.Mountaineering]: "登山",
+    [AdventureType.Hiking]: "徒步",
+  };
+  return chineseMap[type];
+};

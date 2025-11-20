@@ -1,6 +1,6 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
 import { TeaCard } from "../components/TeaCard";
-import { favoriteTeas, getTeasByType, getTeaTypes } from "../data/teas";
+import { favoriteTeas, getTeaTypes, getTeaTypeChinese } from "../data/teas";
 import { Teapot2 } from "../design/icons/ChineseIcons";
 import _ from "lodash";
 import { useState } from "react";
@@ -26,7 +26,7 @@ export function FavoriteTeas() {
 
       <div className="flex-grow shrink-0 px-8 pb-12">
         {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 sticky top-8 z-10 bg-paper-white py-2 -mx-2 px-2">
           <button
             onClick={() => setSelectedType("all")}
             className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
@@ -41,13 +41,18 @@ export function FavoriteTeas() {
             <button
               key={type}
               onClick={() => setSelectedType(type)}
-              className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
+              className={`group relative px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
                 selectedType === type
                   ? "bg-brown-primary text-paper-white"
                   : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
               }`}
             >
-              {_.lowerCase(type)}
+              <span className="group-hover:opacity-0 transition-opacity duration-200">
+                {_.lowerCase(type)}
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                {getTeaTypeChinese(type)}
+              </span>
             </button>
           ))}
         </div>

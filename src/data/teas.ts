@@ -191,3 +191,16 @@ export const getTeaTypes = (teas: TeaItem[]): TeaType[] => {
     )
   );
 };
+
+export const getTeaTypeChinese = (type: TeaType): string => {
+  const chineseMap: Record<TeaType, string> = {
+    [TeaType.Green]: "綠茶",
+    [TeaType.Black]: "紅茶",
+    [TeaType.Oolong]: "烏龍茶",
+    [TeaType.White]: "白茶",
+    [TeaType.PuErh]: "普洱茶",
+    [TeaType.Herbal]: "花草茶",
+    [TeaType.Rooibos]: "路易波士茶",
+  };
+  return chineseMap[type];
+};

@@ -13,3 +13,7 @@ will install dependencies needed to run the site
 
 runs the app in the development mode @ [http://localhost:3615](http://localhost:3615)
 the page will reload if you make edits
+
+### credits
+
+Icons by [Basic Miscellany / Lineal](https://www.flaticon.com/authors/basic-miscellany/lineal?author_id=159&type=standard) from Flaticon
