@@ -20,11 +20,67 @@ export interface TeaItem {
 
 export const favoriteTeas: TeaItem[] = [
   {
+    name: "Lũng Phìn Small Leaf Green",
+    distributor: "Anne Ye Tea",
+    type: TeaType.Green,
+    description:
+      "A small-leaf green tea from Lũng Phìn in Hà Giang Province, Vietnam, known for its clean vegetal profile and delicate aroma.",
+    origin: "Lũng Phìn, Đồng Văn, Hà Giang Province, Vietnam"
+  },
+  {
+    name: "Osmanthus Black Tea 桂花红茶",
+    distributor: "Old Ways Tea",
+    type: TeaType.Black,
+    description:
+      "A black tea scented with osmanthus blossoms, offering a sweet floral aroma layered over rich Wuyishan black tea character.",
+    origin: "Wuyishan, China"
+  },
+  {
+    name: "Old Tree Rou Gui 肉桂",
+    distributor: "Old Ways Tea",
+    type: TeaType.Oolong,
+    description:
+      "A Rou Gui oolong harvested from older tea trees in Wuyishan, showcasing warming spice, mineral depth, and classic rock-tea fragrance.",
+    origin: "Wuyishan, China"
+  },
+  {
+    name: "Lao Cong Shui Xian 老枞水仙",
+    distributor: "Old Ways Tea",
+    type: TeaType.Oolong,
+    description:
+      "An aged-tree Shui Xian oolong with deep, woody, roasted notes and the trademark smoothness of mature-bush Wuyi cultivars.",
+    origin: "Wuyishan, China"
+  },
+  {
+    name: "Chrysanthemum Joonjak",
+    distributor: "Roots and Rituals",
+    type: TeaType.Green,
+    description:
+      "A Korean green tea blended with chrysanthemum flowers, balancing fresh green tea sweetness with gentle floral aroma.",
+    origin: "Boseong, South Korea"
+  },
+  {
+    name: "Shan Lin Xi High Mountain Pink Blossom",
+    distributor: "teance",
+    type: TeaType.Oolong,
+    description:
+      "A high-mountain oolong from Shan Lin Xi, offering floral fragrance, buttery texture, and bright high-elevation freshness.",
+    origin: "Shan Lin Xi, Nantou, Taiwan"
+  },
+  {
+    name: "2006 Xishuangbanna Green Loose Puer 西雙版納普洱生茶",
+    distributor: "Pure Puer Tea",
+    type: TeaType.PuErh, 
+    description:
+      "Hand-picked in spring from ancient pu’er tea trees in Xishuangbanna, this loose raw pu’er brews to a clear yellow liquor with floral-honey notes, a subtle bitterness, and a sweet aftertaste. Leaves give a moist sensation and reflect the mellow age of the tea.",
+    origin: "Xishuangbanna, Yunnan, China",
+  },
+  {
     name: "genma chai superior",
     distributor: "lucas teas",
     type: TeaType.Green,
     description:
-      "made by a japanese tea master, this tea is an excellent example of a superb genmai — superiorly roasted rice perfectly blends with high end bancha giving a smooth finish", // from Lucas Teas page :contentReference[oaicite:0]{index=0}
+      "made by a japanese tea master, this tea is an excellent example of a superb genmai — superiorly roasted rice perfectly blends with high end bancha giving a smooth finish",
     origin: "",
   },
   {
@@ -32,7 +88,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "lucas teas",
     type: TeaType.Black,
     description:
-      "a treat for dessert lovers — coconut and chocolate are blended with black tea for a delicious cup; excellent with a splash of steamed milk and sweetener", // from Lucas Teas product description
+      "a treat for dessert lovers — coconut and chocolate are blended with black tea for a delicious cup; excellent with a splash of steamed milk and sweetener",
     origin: "",
   },
   {
@@ -48,7 +104,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "song tea",
     type: TeaType.Oolong,
     description:
-      "unsprayed light charcoal roasted oolong from taiwan with notes of magnolia x alba, cantaloupe, and pistachio gelato", // from Song Tea page :contentReference[oaicite:1]{index=1}
+      "unsprayed light charcoal roasted oolong from taiwan with notes of magnolia x alba, cantaloupe, and pistachio gelato",
     origin: "taiwan",
   },
   {
@@ -56,7 +112,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "song tea",
     type: TeaType.White,
     description:
-      "a wild-harvested white tea with gentle woodiness and floral sweetness", // approximated — I couldn't find a detailed description via the pages I saw
+      "a wild-harvested white tea with gentle woodiness and floral sweetness",
     origin: "fujian",
   },
   {
@@ -64,7 +120,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "song tea",
     type: TeaType.Black,
     description:
-      "a red tea with a rich aromatic base layered with a longan charcoal-roasted finish; notes of grenadine, peony and golden raspberry", // from Steepster review :contentReference[oaicite:2]{index=2}
+      "a red tea with a rich aromatic base layered with a longan charcoal-roasted finish; notes of grenadine, peony and golden raspberry",
     origin: "taiwan",
   },
   {
@@ -80,7 +136,7 @@ export const favoriteTeas: TeaItem[] = [
     distributor: "miro tea",
     type: TeaType.Oolong,
     description:
-      "a fruity blend of oolong, schizandra berries, rosehips, hibiscus and dried strawberries — simultaneously tart and sweet with a complex, penetrating aroma", // from Miro Tea page :contentReference[oaicite:3]{index=3}
+      "a fruity blend of oolong, schizandra berries, rosehips, hibiscus and dried strawberries — simultaneously tart and sweet with a complex, penetrating aroma",
     origin: "",
   },
   {
