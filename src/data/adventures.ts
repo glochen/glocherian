@@ -273,6 +273,14 @@ export const favoriteAdventures: AdventureItem[] = [
       "still my favorite place on this earth",
     date: { month: "july", year: 2025 },
   },
+  {
+    name: "kern valley/the needles",
+    location: "california",
+    type: AdventureType.Climbing,
+    description:
+      "who knew kern valley was so beautiful",
+    date: { month: "november", year: 2025 },
+  },
 ];
 
 export const getAdventuresByType = (
