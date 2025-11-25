@@ -20,59 +20,59 @@ export interface TeaItem {
 
 export const favoriteTeas: TeaItem[] = [
   {
-    name: "Lũng Phìn Small Leaf Green",
-    distributor: "Anne Ye Tea",
+    name: "lũng phìn small leaf green",
+    distributor: "anne ye tea",
     type: TeaType.Green,
     description:
-      "A small-leaf green tea from Lũng Phìn in Hà Giang Province, Vietnam, known for its clean vegetal profile and delicate aroma.",
+      "a small-leaf green tea from lũng phìn in hà giang province, vietnam, known for its clean vegetal profile and delicate aroma.",
     origin: "Lũng Phìn, Đồng Văn, Hà Giang Province, Vietnam"
   },
   {
-    name: "Osmanthus Black Tea 桂花红茶",
-    distributor: "Old Ways Tea",
+    name: "osmanthus black tea 桂花红茶",
+    distributor: "old ways tea",
     type: TeaType.Black,
     description:
-      "A black tea scented with osmanthus blossoms, offering a sweet floral aroma layered over rich Wuyishan black tea character.",
+      "a black tea scented with osmanthus blossoms, offering a sweet floral aroma layered over rich wuyishan black tea character.",
     origin: "Wuyishan, China"
   },
   {
-    name: "Old Tree Rou Gui 肉桂",
-    distributor: "Old Ways Tea",
+    name: "old tree rou gui 肉桂",
+    distributor: "old ways tea",
     type: TeaType.Oolong,
     description:
-      "A Rou Gui oolong harvested from older tea trees in Wuyishan, showcasing warming spice, mineral depth, and classic rock-tea fragrance.",
+      "a rou gui oolong harvested from older tea trees in wuyishan, showcasing warming spice, mineral depth, and classic rock-tea fragrance.",
     origin: "Wuyishan, China"
   },
   {
-    name: "Lao Cong Shui Xian 老枞水仙",
-    distributor: "Old Ways Tea",
+    name: "lao cong shui xian 老枞水仙",
+    distributor: "old ways tea",
     type: TeaType.Oolong,
     description:
-      "An aged-tree Shui Xian oolong with deep, woody, roasted notes and the trademark smoothness of mature-bush Wuyi cultivars.",
+      "an aged-tree shui xian oolong with deep, woody, roasted notes and the trademark smoothness of mature-bush wuyi cultivars.",
     origin: "Wuyishan, China"
   },
   {
-    name: "Chrysanthemum Joonjak",
-    distributor: "Roots and Rituals",
+    name: "chrysanthemum joonjak",
+    distributor: "roots and rituals",
     type: TeaType.Green,
     description:
-      "A Korean green tea blended with chrysanthemum flowers, balancing fresh green tea sweetness with gentle floral aroma.",
+      "a korean green tea blended with chrysanthemum flowers, balancing fresh green tea sweetness with gentle floral aroma.",
     origin: "Boseong, South Korea"
   },
   {
-    name: "Shan Lin Xi High Mountain Pink Blossom",
+    name: "shan lin xi high mountain pink blossom",
     distributor: "teance",
     type: TeaType.Oolong,
     description:
-      "A high-mountain oolong from Shan Lin Xi, offering floral fragrance, buttery texture, and bright high-elevation freshness.",
+      "a high-mountain oolong from shan lin xi, offering floral fragrance, buttery texture, and bright high-elevation freshness.",
     origin: "Shan Lin Xi, Nantou, Taiwan"
   },
   {
-    name: "2006 Xishuangbanna Green Loose Puer 西雙版納普洱生茶",
-    distributor: "Pure Puer Tea",
+    name: "2006 xishuangbanna green loose puer 西雙版納普洱生茶",
+    distributor: "pure puer tea",
     type: TeaType.PuErh, 
     description:
-      "Hand-picked in spring from ancient pu’er tea trees in Xishuangbanna, this loose raw pu’er brews to a clear yellow liquor with floral-honey notes, a subtle bitterness, and a sweet aftertaste. Leaves give a moist sensation and reflect the mellow age of the tea.",
+      "hand-picked in spring from ancient pu'er tea trees in xishuangbanna, this loose raw pu'er brews to a clear yellow liquor with floral-honey notes, a subtle bitterness, and a sweet aftertaste. leaves give a moist sensation and reflect the mellow age of the tea.",
     origin: "Xishuangbanna, Yunnan, China",
   },
   {
