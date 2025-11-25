@@ -37,39 +37,39 @@ export function AdventureCard({ adventure }: AdventureCardProps) {
   const TypeIcon = getAdventureIcon(adventure.type);
 
   return (
-    <div className="content-card-border text-blue-secondary bg-paper-white rounded-lg p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
+    <div className="text-brown-secondary bg-paper-white rounded-lg p-2 flex flex-col gap-2">
       {/* Adventure Type Badge with Icon */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-2">
           <TypeIcon size="sm" />
-          <span className="px-3 py-1.5 text-xs font-sans font-medium rounded-full border bg-blue-tertiary/40 text-blue-secondary border-blue-tertiary tracking-wide">
+          <span className="px-3 py-1.5 text-xs font-sans font-medium rounded-full border bg-brown-tertiary/40 text-brown-secondary border-brown-tertiary tracking-wide">
             {_.lowerCase(adventure.type)}
           </span>
         </div>
       </div>
 
       {/* Adventure Name */}
-      <h3 className="text-ink-black text-lg font-sans font-semibold leading-tight">
+      <h3 className="text-ink-black text-base font-sans font-semibold leading-tight">
         {adventure.name}
       </h3>
 
       {/* Location */}
       <div className="flex items-center gap-2">
-        <span className="text-blue-primary text-sm font-sans font-medium">
+        <span className="text-brown-primary text-sm font-sans font-medium">
           {adventure.location}
         </span>
       </div>
 
       {/* Date */}
-      <div className="flex items-center gap-2 pt-1 border-t border-blue-tertiary/30">
-        <span className="text-blue-primary text-xs font-sans italic">
+      <div className="flex items-center gap-2 pt-1 border-t border-brown-tertiary/30">
+        <span className="text-brown-primary text-xs font-sans italic">
           {adventure.date.month} {adventure.date.year}
         </span>
       </div>
 
       {/* Description */}
       {adventure.description && (
-        <p className="text-ink-black text-sm font-sans leading-relaxed mt-auto pt-2">
+        <p className="text-ink-black text-sm font-sans leading-relaxed pt-1">
           {adventure.description}
         </p>
       )}

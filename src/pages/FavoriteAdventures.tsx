@@ -55,6 +55,45 @@ export function FavoriteAdventures() {
       ? sortedAdventures
       : _.filter(sortedAdventures, (adventure) => adventure.type === selectedType);
 
+  // Group adventures by date (month + year)
+  const groupedByDate = _.groupBy(filteredAdventures, (adventure) => 
+    `${adventure.date.month}-${adventure.date.year}`
+  );
+
+  // Convert grouped object to array and sort by date (most recent first)
+  const dateGroups = _.sortBy(
+    _.map(groupedByDate, (adventures, dateKey) => {
+      const firstAdventure = adventures[0];
+      return {
+        dateKey,
+        month: firstAdventure.date.month,
+        year: firstAdventure.date.year,
+        adventures,
+      };
+    }),
+    (group) => {
+      const year = group.year;
+      const month = group.month;
+      const monthMap: Record<string, number> = {
+        january: 1,
+        february: 2,
+        march: 3,
+        april: 4,
+        may: 5,
+        june: 6,
+        july: 7,
+        august: 8,
+        september: 9,
+        october: 10,
+        november: 11,
+        december: 12,
+        summer: 6.5,
+      };
+      const monthNum = monthMap[month.toLowerCase()] || 0;
+      return -(year * 12 + monthNum);
+    }
+  );
+
   // Map adventure types to their corresponding icons
   const getAdventureIcon = (type: AdventureType) => {
     switch (type) {
@@ -99,25 +138,51 @@ export function FavoriteAdventures() {
 
       <div className="flex-grow shrink-0 px-8 pb-12">
         <div className="flex gap-8">
-          {/* Adventure Cards Grid - Left Side */}
-          <div className="flex-1">
-            {!_.isEmpty(filteredAdventures) ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {_.map(filteredAdventures, (adventure) => (
-                  <AdventureCard
-                    key={`${adventure.name}-${adventure.location}-${adventure.date.month}-${adventure.date.year}`}
-                    adventure={adventure}
-                  />
+          {!_.isEmpty(filteredAdventures) ? (
+            <div className="flex-1 pl-8">
+              <div className="flex flex-col gap-0">
+                {_.map(dateGroups, (dateGroup, groupIndex) => (
+                  <div key={dateGroup.dateKey} className="flex flex-col relative">
+                    {/* Date header - only shown for each date group */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="flex flex-col -ml-2">
+                        <span className="text-brown-secondary text-lg font-sans font-medium italic whitespace-nowrap">
+                          {dateGroup.month}
+                        </span>
+                        <span className="text-brown-primary text-xl font-sans font-semibold whitespace-nowrap">
+                          {dateGroup.year}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Adventure Cards for this date */}
+                    <div className="flex flex-col gap-4">
+                      {_.map(dateGroup.adventures, (adventure) => (
+                        <div key={`${adventure.name}-${adventure.location}-${adventure.date.month}-${adventure.date.year}`} className="flex-1">
+                          <AdventureCard adventure={adventure} />
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Brush stroke line between different dates (not after last group) */}
+                    {groupIndex < dateGroups.length - 1 && (
+                      <div className="flex items-start pl-4 my-1">
+                        <div className="h-20">
+                          <div className="brush-stroke-line-vertical h-full"></div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-brown-secondary text-sm font-sans">
-                  No adventures found in this category.
-                </p>
-              </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="flex-1 text-center py-12">
+              <p className="text-brown-secondary text-sm font-sans">
+                No adventures found in this category.
+              </p>
+            </div>
+          )}
 
           {/* Filter Buttons - Right Side Column */}
           <div className="flex flex-col items-end gap-3 shrink-0 sticky top-8 self-start">
@@ -136,7 +201,7 @@ export function FavoriteAdventures() {
                   onClick={() => setSelectedType("all")}
                   className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${
                     selectedType === "all"
-                      ? "bg-blue-tertiary text-ink-black"
+                      ? "bg-brown-primary text-paper-white"
                       : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
                   }`}
                 >
@@ -150,7 +215,7 @@ export function FavoriteAdventures() {
                       onClick={() => setSelectedType(type)}
                       className={`group relative px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 flex items-center gap-2 ${
                         selectedType === type
-                          ? "bg-blue-tertiary text-ink-black"
+                          ? "bg-brown-primary text-paper-white"
                           : "bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
                       }`}
                     >
