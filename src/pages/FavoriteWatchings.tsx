@@ -1,7 +1,7 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
 import { WatchingCarousel } from "../components/WatchingCarousel";
+import { useTraktFavorites } from "../components/TraktFavoritesColumn";
 import {
-  getFavoriteWatchings,
   WatchingType,
   Provider,
   providerText,
@@ -10,11 +10,11 @@ import { VideoCamera } from "../design/icons/GeneralIcons";
 import _ from "lodash";
 
 export function FavoriteWatchings() {
-  const favoriteWatchings = getFavoriteWatchings();
+  const { favorites: traktFavorites, loading } = useTraktFavorites();
 
   // Group by provider and type
   const groupedWatchings = _.groupBy(
-    favoriteWatchings,
+    traktFavorites,
     (item) => `${item.provider}-${item.type}`
   );
 
@@ -48,7 +48,11 @@ export function FavoriteWatchings() {
       </div>
 
       <div className="flex-grow shrink-0 px-8 pb-12 text-brown-primary">
-        {!_.isEmpty(sortedSections) && (
+        {loading ? (
+          <div className="text-center py-8">
+            <p className="text-ink-black font-sans text-sm">Loading favorites...</p>
+          </div>
+        ) : !_.isEmpty(sortedSections) ? (
           <div className="space-y-8">
             {_.map(sortedSections, (section, index) => (
               <WatchingCarousel
@@ -57,6 +61,10 @@ export function FavoriteWatchings() {
                 items={section.items}
               />
             ))}
+          </div>
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-ink-black font-sans text-sm">No favorites found</p>
           </div>
         )}
       </div>

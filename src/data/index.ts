@@ -1,4 +1,3 @@
-export { currentWatchings, getWatchingsByStatus } from "./watchings";
 export type { WatchingItem } from "./watchings";
 export { favoriteChengyus, getChengyusByOrigin, ChengyuOrigin } from "./chengyus";
 export type { ChengyuItem } from "./chengyus";
