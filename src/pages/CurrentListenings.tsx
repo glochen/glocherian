@@ -1,16 +1,7 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { ListenContentCard } from "../components/ContentCards/ListenContentCard";
-import { getListeningsByStatus, ListeningStatus } from "../data/listenings";
 import { Music } from "../design/icons/GeneralIcons";
-import _ from "lodash";
 
 export function CurrentListenings() {
-  const currentlyListening = getListeningsByStatus(ListeningStatus.Listening);
-  const completedListenings = getListeningsByStatus(
-    ListeningStatus.RecentlyCompleted
-  );
-  const plannedListenings = getListeningsByStatus(ListeningStatus.Planned);
-
   return (
     <VerticalNavPageLayout>
       <div className="py-12 px-8">
@@ -19,48 +10,51 @@ export function CurrentListenings() {
         </div>
       </div>
 
-      <div className="flex-grow shrink-0 px-8 pb-12">
+      {/* Horizontal brush stroke */}
+      <div className="px-8">
+        <div className="brush-stroke-line"></div>
+      </div>
+
+      <div className="flex-grow shrink-0 px-8 pb-12 pt-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="space-y-6">
-            {_.map(currentlyListening, (listening) => (
-              <ListenContentCard
-                key={listening.name}
-                name={listening.name}
-                artistOrPodcast={listening.artistOrPodcast}
-                type={listening.type}
-                description={listening.description}
-                status={listening.status}
-                genre={listening.genre}
-              />
-            ))}
+          <div>
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/3DvQyxBQHqzSVVm6prWNHT?utm_source=generator&theme=0"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
-
-          <div className="space-y-6">
-            {_.map(completedListenings, (listening) => (
-              <ListenContentCard
-                key={listening.name}
-                name={listening.name}
-                artistOrPodcast={listening.artistOrPodcast}
-                type={listening.type}
-                description={listening.description}
-                status={listening.status}
-                genre={listening.genre}
-              />
-            ))}
+          <div>
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/0Xk0CcjZni7Nq2zkOPsSEn?utm_source=generator&theme=1"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
-
-          <div className="space-y-6">
-            {_.map(plannedListenings, (listening) => (
-              <ListenContentCard
-                key={listening.name}
-                name={listening.name}
-                artistOrPodcast={listening.artistOrPodcast}
-                type={listening.type}
-                description={listening.description}
-                status={listening.status}
-                genre={listening.genre}
-              />
-            ))}
+          <div>
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/3l9mNVbiCW01efNtujtX2q?utm_source=generator"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

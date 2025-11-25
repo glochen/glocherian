@@ -1,7 +1,5 @@
 export { currentWatchings, getWatchingsByStatus } from "./watchings";
 export type { WatchingItem } from "./watchings";
-export { currentListenings, getListeningsByStatus } from "./listenings";
-export type { ListeningItem } from "./listenings";
 export { favoriteChengyus, getChengyusByOrigin, ChengyuOrigin } from "./chengyus";
 export type { ChengyuItem } from "./chengyus";
 export { favoriteTeas, getTeasByType, getTeaTypes, TeaType } from "./teas";
