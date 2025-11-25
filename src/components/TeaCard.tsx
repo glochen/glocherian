@@ -6,8 +6,8 @@ interface TeaCardProps {
 }
 
 export function TeaCard({ tea }: TeaCardProps) {
-  return (
-    <div className="content-card-border text-brown-primary bg-paper-white rounded-lg p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full">
+  const cardContent = (
+    <>
       {/* Tea Type Badge */}
       <div className="flex items-start justify-between gap-3">
         <span
@@ -44,6 +44,27 @@ export function TeaCard({ tea }: TeaCardProps) {
           {tea.description}
         </p>
       )}
+    </>
+  );
+
+  const baseClasses = "content-card-border text-brown-primary bg-paper-white rounded-lg p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full";
+
+  if (tea.url) {
+    return (
+      <a
+        href={tea.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${baseClasses} cursor-pointer`}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  return (
+    <div className={baseClasses}>
+      {cardContent}
     </div>
   );
 }
