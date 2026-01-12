@@ -281,6 +281,20 @@ export const favoriteAdventures: AdventureItem[] = [
       "who knew kern valley was so beautiful",
     date: { month: "november", year: 2025 },
   },
+  {
+    name: "thanksgiving 2025 - bishop",
+    location: "bishop, california",
+    type: AdventureType.Climbing,
+    description: "boulders boulders boulders",
+    date: { month: "november", year: 2025 },
+  },
+  {
+    name: "2025 / 2026 new year's aspen skiing",
+    location: "aspen, colorado",
+    type: AdventureType.Skiing,
+    description: "lovely way to start the new year",
+    date: { month: "december", year: 2025 },
+  },
 ];
 
 export const getAdventuresByType = (
