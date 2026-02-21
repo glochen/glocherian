@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { WatchingType, typeText } from "../data/watchings";
 import { H3 } from "../design/Typography";
 import _ from "lodash";
-
-const CLIENT_ID = "cc36288f5a9cd0f4cde3b644f680e5c44ad7bb5b34af63ab34a053c8f36fab43";
-const USERNAME = "glochen";
+import { trakt, TRAKT_USERNAME } from "../api/trakt";
 
 interface TraktItem {
   title: string;
@@ -61,28 +59,6 @@ function renderItemCard(
   );
 }
 
-async function trakt(path: string) {
-  const res = await fetch(`https://api.trakt.tv${path}`, {
-    headers: {
-      "Content-Type": "application/json",
-      "trakt-api-key": CLIENT_ID,
-      "trakt-api-version": "2",
-    },
-  });
-
-  if (res.status === 204 || res.status === 404) return null;
-  if (!res.ok) throw new Error(`Trakt API error: ${res.status} ${res.statusText}`);
-
-  const text = await res.text();
-  if (!text || _.trim(text) === "") return null;
-
-  try {
-    return JSON.parse(text);
-  } catch (err) {
-    throw new Error(`Failed to parse Trakt API response: ${text.substring(0, 100)}`);
-  }
-}
-
 export function WantToWatchColumn() {
   const [watchlist, setWatchlist] = useState<TraktWatchlistEntry[]>([]);
   const [loading, setLoading] = useState(true);
@@ -91,7 +67,7 @@ export function WantToWatchColumn() {
     async function fetchData() {
       try {
         setLoading(true);
-        const watchlistData = await trakt(`/users/${USERNAME}/watchlist?extended=full`);
+        const watchlistData = await trakt(`/users/${TRAKT_USERNAME}/watchlist?extended=full`);
         setWatchlist(_.isArray(watchlistData) ? watchlistData : []);
         setLoading(false);
       } catch (err) {

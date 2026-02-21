@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { WatchingType, WatchingItem, WatchingStatus, Provider } from "../data/watchings";
 import _ from "lodash";
-
-const CLIENT_ID = "cc36288f5a9cd0f4cde3b644f680e5c44ad7bb5b34af63ab34a053c8f36fab43";
-const USERNAME = "glochen";
+import { trakt, TRAKT_USERNAME } from "../api/trakt";
 
 interface TraktItem {
   title: string;
@@ -16,28 +14,6 @@ interface TraktFavoritesEntry {
   show?: TraktItem;
   movie?: TraktItem;
   listed_at?: string;
-}
-
-async function trakt(path: string) {
-  const res = await fetch(`https://api.trakt.tv${path}`, {
-    headers: {
-      "Content-Type": "application/json",
-      "trakt-api-key": CLIENT_ID,
-      "trakt-api-version": "2",
-    },
-  });
-
-  if (res.status === 204 || res.status === 404) return null;
-  if (!res.ok) throw new Error(`Trakt API error: ${res.status} ${res.statusText}`);
-
-  const text = await res.text();
-  if (!text || _.trim(text) === "") return null;
-
-  try {
-    return JSON.parse(text);
-  } catch (err) {
-    throw new Error(`Failed to parse Trakt API response: ${text.substring(0, 100)}`);
-  }
 }
 
 function mapNetworkToProvider(network?: string): Provider {
@@ -91,17 +67,17 @@ export function useTraktFavorites() {
         // Try the favorites endpoint first
         let favoritesData = null;
         try {
-          favoritesData = await trakt(`/users/${USERNAME}/favorites?extended=full`);
+          favoritesData = await trakt(`/users/${TRAKT_USERNAME}/favorites?extended=full`);
         } catch (err) {
           // If favorites endpoint doesn't work, try getting the favorites list
           try {
-            const listsData = await trakt(`/users/${USERNAME}/lists`);
+            const listsData = await trakt(`/users/${TRAKT_USERNAME}/lists`);
             if (_.isArray(listsData)) {
               const favoritesList = _.find(listsData, (list) => 
                 _.toLower(list.name) === "favorites" || _.toLower(list.name) === "favourites"
               );
               if (favoritesList) {
-                favoritesData = await trakt(`/users/${USERNAME}/lists/${favoritesList.ids.slug}/items?extended=full`);
+                favoritesData = await trakt(`/users/${TRAKT_USERNAME}/lists/${favoritesList.ids.slug}/items?extended=full`);
               }
             }
           } catch (listErr) {
