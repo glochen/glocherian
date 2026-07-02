@@ -36,6 +36,26 @@ export function About() {
               <br />
               would love to hear from you
               <br />
+              <br />
+              <span className="inline-flex items-center gap-4 text-sm">
+                <a
+                  href="https://instagram.com/glocherian"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brown-secondary hover:text-ink-black transition-colors"
+                >
+                  instagram
+                </a>
+                <a
+                  href="https://glocherian.substack.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brown-secondary hover:text-ink-black transition-colors"
+                >
+                  substack
+                </a>
+              </span>
+              <br />
               <br />~{`(`}˘▾˘~{`)`}
             </div>
 
