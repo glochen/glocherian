@@ -15,7 +15,7 @@ export function HeroSection() {
   const navigate = useNavigate();
   const browseablePages = _.filter(
     pages,
-    (page) => page.id !== "about" && page.id !== "contact",
+    (page) => page.id !== "about",
   ) as HomePageItem[];
 
   const currentPages = _.filter(browseablePages, (page) =>

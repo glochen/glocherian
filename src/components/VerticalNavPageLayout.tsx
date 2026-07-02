@@ -39,7 +39,7 @@ export function VerticalNavPageLayout({
 
             <div className="mt-2 flex flex-col gap-2">
               {_.map(
-                _.filter(pages, (page) => page.id !== "about" && page.id !== "contact"),
+                _.filter(pages, (page) => page.id !== "about"),
                 (page) => {
                   const Icon = page.icon;
                   const isCurrentPage = currentPageId === page.id;
