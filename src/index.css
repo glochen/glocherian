@@ -17,6 +17,11 @@ body {
     "Droid Sans",
     "Helvetica Neue",
     sans-serif;
+  background: #222222;
+  color: #222222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 code {
@@ -24,39 +29,53 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.site-icon {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%)
+    hue-rotate(186deg) brightness(95%) contrast(92%);
+}
+
+.icons-light .site-icon {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(11%) saturate(297%)
+    hue-rotate(41deg) brightness(100%) contrast(93%);
+}
+
 @layer components {
+  .modern-surface {
+    border: 1px solid rgba(53, 47, 53, 0.16);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .modern-card {
+    @apply modern-surface transition-all duration-200;
+  }
+
+  .modern-card:hover {
+    border-color: rgba(53, 47, 53, 0.3);
+  }
+
   .brush-stroke-line {
-    position: relative;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      #611d0f 20%,
-      /* brown-primary */ #611d0f 50%,
-      /* brown-primary */ #611d0f 80%,
-      /* brown-primary */ transparent 100%
-    );
-    border-radius: 1px;
-    box-shadow: 0 1px 2px rgba(97, 29, 15, 0.2); /* brown-primary with 20% opacity */
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(53, 47, 53, 0.45) 50%, transparent 100%);
+    border-radius: 999px;
   }
 
   .brush-stroke-line-vertical {
-    position: relative;
-    width: 2px;
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(97, 29, 15, 0.6) 20%,
-      /* brown-primary with 60% opacity */ rgba(97, 29, 15, 0.8) 50%,
-      /* brown-primary with 80% opacity */ rgba(97, 29, 15, 0.6) 80%,
-      /* brown-primary with 60% opacity */ transparent 100%
-    );
-    border-radius: 1px;
-    box-shadow: 1px 0 2px rgba(97, 29, 15, 0.2); /* brown-primary with 20% opacity */
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, rgba(53, 47, 53, 0.45) 50%, transparent 100%);
+    border-radius: 999px;
   }
 
   .content-card-border {
     position: relative;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 1rem;
   }
 
   .content-card-border::before {
@@ -66,28 +85,14 @@ code {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(
-      180deg,
-      currentColor 0%,
-      currentColor 35%,
-      transparent 100%
-    );
+    background: linear-gradient(180deg, currentColor 0%, currentColor 45%, transparent 100%);
     border-radius: 1px;
   }
 
   .about-brush-stroke-right {
-    position: relative;
-    width: 2px;
+    width: 1px;
     height: 100%;
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(147, 174, 191, 0.6) 20%,
-      /* blue-secondary with 60% opacity */ rgba(147, 174, 191, 0.8) 50%,
-      /* blue-secondary with 80% opacity */ rgba(147, 174, 191, 0.6) 80%,
-      /* blue-secondary with 60% opacity */ transparent 100%
-    );
-    border-radius: 1px;
-    box-shadow: 1px 0 2px rgba(147, 174, 191, 0.2); /* blue-secondary with 20% opacity */
+    background: linear-gradient(180deg, transparent 0%, rgba(53, 47, 53, 0.5) 50%, transparent 100%);
+    border-radius: 999px;
   }
 }

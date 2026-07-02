@@ -11,7 +11,7 @@ export function TeaCard({ tea }: TeaCardProps) {
       {/* Tea Type Badge */}
       <div className="flex items-start justify-between gap-3">
         <span
-          className={`px-3 py-1.5 text-xs font-sans font-medium rounded-full border bg-brown-tertiary/40 text-brown-secondary border-brown-tertiary tracking-wide`}
+          className={`text-[11px] font-sans text-moss tracking-[0.14em] uppercase`}
         >
           {_.lowerCase(tea.type)}
         </span>
@@ -24,15 +24,15 @@ export function TeaCard({ tea }: TeaCardProps) {
 
       {/* Distributor */}
       <div className="flex items-center gap-2">
-        <span className="text-brown-secondary text-sm font-sans font-medium">
+        <span className="text-moss text-sm font-sans font-medium">
           {tea.distributor}
         </span>
       </div>
 
       {/* Origin */}
       {tea.origin && (
-        <div className="flex items-center gap-2 pt-1 border-t border-brown-tertiary/30">
-          <span className="text-brown-primary text-xs font-sans italic">
+        <div className="flex items-center gap-2 pt-2 border-t border-moss/30">
+          <span className="text-moss text-xs font-sans italic">
             {tea.origin}
           </span>
         </div>
@@ -40,14 +40,15 @@ export function TeaCard({ tea }: TeaCardProps) {
 
       {/* Description */}
       {tea.description && (
-        <p className="text-ink-black text-sm font-sans leading-relaxed mt-auto pt-2">
+        <p className="text-ink-black/85 text-sm font-sans leading-relaxed mt-auto pt-2">
           {tea.description}
         </p>
       )}
     </>
   );
 
-  const baseClasses = "content-card-border text-brown-primary bg-paper-white rounded-lg p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col gap-4 h-full";
+  const baseClasses =
+    "text-ink-black p-4 flex flex-col gap-4 h-full border-b border-moss/30";
 
   if (tea.url) {
     return (

@@ -23,7 +23,7 @@ export const BaseIcon: React.FC<BaseIconProps> = ({
     <img
       src={src}
       alt={alt}
-      className={className}
+      className={`site-icon ${className}`.trim()}
       style={{ ...sizeStyle, ...style }}
     />
   );

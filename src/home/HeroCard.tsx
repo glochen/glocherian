@@ -10,15 +10,19 @@ interface HeroCardProps {
 
 export function HeroCard({ icon: Icon, englishDescription, chineseDescription, onClick }: HeroCardProps) {
   return (
-    <div 
-      className={`flex flex-col items-center justify-center p-6 gap-1 rounded-xl border border-brown-tertiary/20 hover:bg-brown-tertiary/20 transition-all duration-300 hover:scale-105 ${onClick ? 'cursor-pointer' : ''}`}
+    <div
+      className={`flex items-center justify-between py-4 border-b border-sage-light/20 transition-colors duration-200 hover:border-sage-light/40 ${
+        onClick ? "cursor-pointer" : ""
+      }`}
       onClick={onClick}
     >
-      <div className="mb-4">
-        <Icon size="lg" />
+      <div className="flex items-center gap-3">
+        <Icon size="sm" />
+        <div className="text-sage-light text-base font-lxgw-wenkai-tc">{chineseDescription}</div>
       </div>
-      <div className="text-ink-black text-md font-lxgw-wenkai-tc">{chineseDescription}</div>
-      <div className="text-blue-primary text-md font-sans">{englishDescription}</div>
+      <div className="text-moss text-[11px] tracking-[0.16em] uppercase font-sans font-medium text-right">
+        {englishDescription}
+      </div>
     </div>
   );
 }

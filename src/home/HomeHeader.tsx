@@ -2,17 +2,22 @@ import { ChineseH1, H3 } from "../design/Typography";
 
 export function HomeHeader() {
   return (
-    <>
-      <div className="flex flex-row py-20 px-8 justify-center gap-6">
-        <img src={`${process.env.PUBLIC_URL}/chinese_seal.png`} alt="Chinese seal" className="h-20" />
-        <div className="flex flex-col justify-left gap-6">
-          <ChineseH1>
+    <header>
+      <div className="relative flex items-center justify-center min-h-[56px]">
+        <img
+          src={`${process.env.PUBLIC_URL}/chinese_seal.png`}
+          alt="Chinese seal"
+          className="absolute left-0 h-14 w-14 object-contain"
+        />
+        <div className="flex items-baseline gap-2 md:gap-3 text-center">
+          <ChineseH1 className="tracking-tight text-sage-light text-lg md:text-xl">
             哈咯 ヾ{"("}^-^{")"}
           </ChineseH1>
-          <H3 color="blue-primary">have a fun romp around</H3>
+          <H3 color="paper-white" className="font-normal text-sm md:text-base">
+            have a fun romp around
+          </H3>
         </div>
       </div>
-      <div className="brush-stroke-line"></div>
-    </>
+    </header>
   );
 }

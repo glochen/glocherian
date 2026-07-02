@@ -58,8 +58,8 @@ function WatchingItemCard({
       onMouseLeave={onLeave}
     >
       <div
-        className={`h-32 rounded-md p-3 transition-all duration-300 ${
-          isExpanded ? "bg-paper-white" : "bg-brown-tertiary/20"
+        className={`h-32 rounded-xl p-3 transition-all duration-300 border border-mist/45 ${
+          isExpanded ? "bg-sage-light/70 shadow-md" : "bg-mist/15"
         }`}
       >
         {!isExpanded && (
@@ -72,9 +72,7 @@ function WatchingItemCard({
                 {typeText[item.type]} • {providerText[item.provider]}
               </p>
             </div>
-            {item.genre && (
-              <p className="text-xs text-brown-secondary">{item.genre}</p>
-            )}
+            {item.genre && <p className="text-xs text-brown-secondary">{item.genre}</p>}
           </div>
         )}
       </div>

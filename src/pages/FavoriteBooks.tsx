@@ -54,7 +54,7 @@ export function FavoriteBooks() {
           wrapper.className = "books-wrapper-1763509539 content-card-border text-brown-secondary";
           wrapper.style.paddingLeft = "20px";
           wrapper.style.marginTop = "10px";
-          wrapper.style.color = "#141414"; // ink-black
+          wrapper.style.color = "#E6EFDB"; // ink-black
           books.forEach((book) => wrapper.appendChild(book.cloneNode(true)));
           books.forEach((book) => book.remove());
           container.appendChild(wrapper);
@@ -65,7 +65,7 @@ export function FavoriteBooks() {
     // Load Goodreads widget script for favorites
     const script = document.createElement("script");
     script.src =
-      "https://www.goodreads.com/review/custom_widget/45442810.favorites?cover_position=left&cover_size=small&num_books=100&order=d&shelf=favorites&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=avg_rating&widget_bg_color=FFFBF0&widget_bg_transparent=&widget_border_width=1&widget_id=1763509539&widget_text_color=000000&widget_title_size=large&widget_width=full";
+      "https://www.goodreads.com/review/custom_widget/45442810.favorites?cover_position=left&cover_size=small&num_books=100&order=d&shelf=favorites&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=avg_rating&widget_bg_color=99A4A0&widget_bg_transparent=&widget_border_width=1&widget_id=1763509539&widget_text_color=222222&widget_title_size=large&widget_width=full";
     script.type = "text/javascript";
     script.charset = "utf-8";
     script.async = true;

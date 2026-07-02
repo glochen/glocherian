@@ -37,12 +37,12 @@ export function AdventureCard({ adventure }: AdventureCardProps) {
   const TypeIcon = getAdventureIcon(adventure.type);
 
   return (
-    <div className="text-brown-secondary bg-paper-white rounded-lg p-2 flex flex-col gap-2">
+    <div className="text-ink-black p-3 flex flex-col gap-3 border-b border-moss/30">
       {/* Adventure Type Badge with Icon */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-2">
           <TypeIcon size="sm" />
-          <span className="px-3 py-1.5 text-xs font-sans font-medium rounded-full border bg-brown-tertiary/40 text-brown-secondary border-brown-tertiary tracking-wide">
+          <span className="text-[11px] font-sans text-moss tracking-[0.14em] uppercase">
             {_.lowerCase(adventure.type)}
           </span>
         </div>
@@ -55,21 +55,21 @@ export function AdventureCard({ adventure }: AdventureCardProps) {
 
       {/* Location */}
       <div className="flex items-center gap-2">
-        <span className="text-brown-primary text-sm font-sans font-medium">
+        <span className="text-moss text-sm font-sans font-medium">
           {adventure.location}
         </span>
       </div>
 
       {/* Date */}
-      <div className="flex items-center gap-2 pt-1 border-t border-brown-tertiary/30">
-        <span className="text-brown-primary text-xs font-sans italic">
+      <div className="flex items-center gap-2 pt-2 border-t border-moss/20">
+        <span className="text-moss text-xs font-sans italic">
           {adventure.date.month} {adventure.date.year}
         </span>
       </div>
 
       {/* Description */}
       {adventure.description && (
-        <p className="text-ink-black text-sm font-sans leading-relaxed pt-1">
+        <p className="text-ink-black/85 text-sm font-sans leading-relaxed pt-1">
           {adventure.description}
         </p>
       )}

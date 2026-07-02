@@ -27,7 +27,7 @@ export function FavoriteTeas() {
 
       <div className="flex-grow shrink-0 px-8 pb-12">
         {/* Toggle Button */}
-        <div className="flex justify-center mb-4 sticky top-8 z-10 bg-paper-white py-2 -mx-2 px-2">
+        <div className="flex justify-center mb-4 sticky top-8 z-10 bg-transparent py-2 -mx-2 px-2">
           <button
             onClick={() => setShowFilters(!showFilters)}
             className="px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 bg-brown-tertiary/30 text-brown-secondary hover:bg-brown-tertiary/50"
@@ -38,7 +38,7 @@ export function FavoriteTeas() {
 
         {/* Filter Buttons */}
         {showFilters && (
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8 sticky top-20 z-10 bg-paper-white py-2 -mx-2 px-2 transition-all duration-200">
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-8 sticky top-20 z-10 bg-transparent py-2 -mx-2 px-2 transition-all duration-200">
             <button
               onClick={() => setSelectedType("all")}
               className={`px-4 py-2 rounded-full text-sm font-sans transition-all duration-200 ${

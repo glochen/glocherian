@@ -72,7 +72,7 @@ export function CurrentReadings() {
           wrapper1.className = "books-wrapper-1763495787 content-card-border text-blue-primary";
           wrapper1.style.paddingLeft = "20px";
           wrapper1.style.marginTop = "10px";
-          wrapper1.style.color = "#141414"; // ink-black
+          wrapper1.style.color = "#E6EFDB"; // ink-black
           books1.forEach((book) => wrapper1.appendChild(book.cloneNode(true)));
           books1.forEach((book) => book.remove());
           container1.appendChild(wrapper1);
@@ -92,7 +92,7 @@ export function CurrentReadings() {
           wrapper2.className = "books-wrapper-1763495800 content-card-border text-brown-primary";
           wrapper2.style.paddingLeft = "20px";
           wrapper2.style.marginTop = "10px";
-          wrapper2.style.color = "#141414"; // ink-black
+          wrapper2.style.color = "#E6EFDB"; // ink-black
           books2.forEach((book) => wrapper2.appendChild(book.cloneNode(true)));
           books2.forEach((book) => book.remove());
           container2.appendChild(wrapper2);
@@ -112,7 +112,7 @@ export function CurrentReadings() {
           wrapper3.className = "books-wrapper-1763496095 content-card-border text-brown-tertiary";
           wrapper3.style.paddingLeft = "20px";
           wrapper3.style.marginTop = "10px";
-          wrapper3.style.color = "#141414"; // ink-black
+          wrapper3.style.color = "#E6EFDB"; // ink-black
           books3.forEach((book) => wrapper3.appendChild(book.cloneNode(true)));
           books3.forEach((book) => book.remove());
           container3.appendChild(wrapper3);
@@ -123,7 +123,7 @@ export function CurrentReadings() {
     // Load Goodreads widget script for currently reading
     const script1 = document.createElement("script");
     script1.src =
-      "https://www.goodreads.com/review/custom_widget/45442810.Gloria's%20bookshelf:%20currently-reading?cover_position=left&cover_size=small&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFBF0&widget_bg_transparent=&widget_border_width=1&widget_id=1763495787&widget_text_color=000000&widget_title_size=large&widget_width=full";
+      "https://www.goodreads.com/review/custom_widget/45442810.Gloria's%20bookshelf:%20currently-reading?cover_position=left&cover_size=small&num_books=5&order=a&shelf=currently-reading&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=99A4A0&widget_bg_transparent=&widget_border_width=1&widget_id=1763495787&widget_text_color=222222&widget_title_size=large&widget_width=full";
     script1.type = "text/javascript";
     script1.charset = "utf-8";
     script1.async = true;
@@ -154,7 +154,7 @@ export function CurrentReadings() {
     // Load Goodreads widget script for read books
     const script2 = document.createElement("script");
     script2.src =
-      "https://www.goodreads.com/review/custom_widget/45442810.Gloria's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_read&widget_bg_color=FFFBF0&widget_bg_transparent=&widget_border_width=1&widget_id=1763495800&widget_text_color=000000&widget_title_size=large&widget_width=full";
+      "https://www.goodreads.com/review/custom_widget/45442810.Gloria's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_read&widget_bg_color=99A4A0&widget_bg_transparent=&widget_border_width=1&widget_id=1763495800&widget_text_color=222222&widget_title_size=large&widget_width=full";
     script2.type = "text/javascript";
     script2.charset = "utf-8";
     script2.async = true;
@@ -184,7 +184,7 @@ export function CurrentReadings() {
     // Load Goodreads widget script for to-read books
     const script3 = document.createElement("script");
     script3.src =
-      "https://www.goodreads.com/review/custom_widget/45442810.Gloria's%20bookshelf:%20to-read?cover_position=left&cover_size=small&num_books=5&order=a&shelf=to-read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=random&widget_bg_color=FFFBF0&widget_bg_transparent=&widget_border_width=1&widget_id=1763496095&widget_text_color=000000&widget_title_size=large&widget_width=full";
+      "https://www.goodreads.com/review/custom_widget/45442810.Gloria's%20bookshelf:%20to-read?cover_position=left&cover_size=small&num_books=5&order=a&shelf=to-read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=random&widget_bg_color=99A4A0&widget_bg_transparent=&widget_border_width=1&widget_id=1763496095&widget_text_color=222222&widget_title_size=large&widget_width=full";
     script3.type = "text/javascript";
     script3.charset = "utf-8";
     script3.async = true;

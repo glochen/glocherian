@@ -73,7 +73,7 @@ export const ChengyuBanner: React.FC<ChengyuBannerProps> = ({
             chengyu={chengyu.chengyu}
             literalTranslation={chengyu.literalTranslation}
             meaning={chengyu.meaning}
-            className="bg-paper-white h-80 flex flex-col justify-between content-card-border"
+            className="h-80 flex flex-col justify-between content-card-border"
           />
         </div>
       )}

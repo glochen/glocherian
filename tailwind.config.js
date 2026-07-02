@@ -11,17 +11,26 @@ module.exports = {
         'lxgw-wenkai-tc': ['"LXGW WenKai TC"', 'sans-serif'],
       },
       colors: {
-        /** Blues */
-        "blue-primary": "#4e7fa3", // darkest
-        "blue-secondary": "#93AEBF", // middle
-        "blue-tertiary": "#E4EDF2", // lightest
-        /** Browns */
-        "brown-primary": "#611D0F", // red-brown
-        "brown-secondary": "#664935", // brown
-        "brown-tertiary": "#DFD3B5", // tan
-        /** neutrals */
-        "paper-white": "#FFFBF0",
-        "ink-black": "#141414",
+        /** Modern theme palette */
+        "forest-deep": "#28361B",
+        "moss": "#626E5A",
+        "sage-light": "#E6EFDB",
+        "mist": "#99A4A0",
+        "plum-deep": "#352F35",
+        "lavender-muted": "#7F7482",
+        "slate-deep": "#3E4049",
+        "periwinkle": "#8F99C9",
+        "cloud-lavender": "#86879E",
+        "charcoal": "#222222",
+        /** Backwards-compatible tokens */
+        "blue-primary": "#626E5A",
+        "blue-secondary": "#3E4049",
+        "blue-tertiary": "#EDEAE3",
+        "brown-primary": "#352F35",
+        "brown-secondary": "#626E5A",
+        "brown-tertiary": "#DAD5CC",
+        "paper-white": "#F7F5F2",
+        "ink-black": "#222222",
       },
     },
   },
