@@ -1,42 +1,25 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { WatchingCarousel } from "../components/WatchingCarousel";
 import { useTraktFavorites } from "../components/TraktFavoritesColumn";
-import {
-  WatchingType,
-  Provider,
-  providerText,
-} from "../data/watchings";
+import { WatchingType } from "../data/watchings";
 import { VideoCamera } from "../design/icons/GeneralIcons";
 import _ from "lodash";
 
 export function FavoriteWatchings() {
   const { favorites: traktFavorites, loading } = useTraktFavorites();
 
-  // Group by provider and type
-  const groupedWatchings = _.groupBy(
-    traktFavorites,
-    (item) => `${item.provider}-${item.type}`
+  const movies = _.sortBy(
+    _.uniqBy(
+      _.filter(traktFavorites, (item) => item.type === WatchingType.Movie),
+      (item) => _.toLower(item.title)
+    ),
+    (item) => _.toLower(item.title)
   );
-
-  // Create carousel sections
-  const carouselSections = _.map(groupedWatchings, (items, key) => {
-    const [provider, type] = key.split("-");
-    const providerName = providerText[provider as Provider];
-
-    const typeText = {
-      [WatchingType.Movie]: "movies",
-      [WatchingType.TVShow]: "tv shows",
-    }[type as WatchingType];
-
-    return {
-      title: `${providerName} ${typeText}`,
-      items: _.sortBy(items, "title"),
-    };
-  });
-
-  // Sort sections by provider name
-  const sortedSections = _.sortBy(carouselSections, (section) =>
-    _.lowerCase(section.title)
+  const tvShows = _.sortBy(
+    _.uniqBy(
+      _.filter(traktFavorites, (item) => item.type === WatchingType.TVShow),
+      (item) => _.toLower(item.title)
+    ),
+    (item) => _.toLower(item.title)
   );
 
   return (
@@ -52,15 +35,61 @@ export function FavoriteWatchings() {
           <div className="text-center py-8">
             <p className="text-ink-black font-sans text-sm">Loading favorites...</p>
           </div>
-        ) : !_.isEmpty(sortedSections) ? (
-          <div className="space-y-8">
-            {_.map(sortedSections, (section, index) => (
-              <WatchingCarousel
-                key={`${section.title}-${index}`}
-                title={section.title}
-                items={section.items}
-              />
-            ))}
+        ) : !_.isEmpty(movies) || !_.isEmpty(tvShows) ? (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <section className="content-card-border text-blue-primary py-2 pr-6">
+              <div className="mb-4">
+                <h2 className="text-ink-black text-lg font-sans">movies</h2>
+              </div>
+              {movies.length > 0 ? (
+                <ul className="space-y-2">
+                  {movies.map((item, index) => (
+                    <li
+                      key={`${item.title}-${index}`}
+                      className="text-ink-black text-sm font-sans leading-tight rounded-lg px-3 py-2.5 bg-paper-white/30"
+                    >
+                      <div className="flex items-baseline justify-between gap-3">
+                        <span>{item.title}</span>
+                        {item.year ? (
+                          <span className="text-[11px] font-sans text-brown-secondary tracking-wide">
+                            {item.year}
+                          </span>
+                        ) : null}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-ink-black font-sans text-sm">No movies found</p>
+              )}
+            </section>
+
+            <section className="content-card-border text-brown-primary py-2 pr-6">
+              <div className="mb-4">
+                <h2 className="text-ink-black text-lg font-sans">tv shows</h2>
+              </div>
+              {tvShows.length > 0 ? (
+                <ul className="space-y-2">
+                  {tvShows.map((item, index) => (
+                    <li
+                      key={`${item.title}-${index}`}
+                      className="text-ink-black text-sm font-sans leading-tight rounded-lg px-3 py-2.5 bg-paper-white/30"
+                    >
+                      <div className="flex items-baseline justify-between gap-3">
+                        <span>{item.title}</span>
+                        {item.year ? (
+                          <span className="text-[11px] font-sans text-brown-secondary tracking-wide">
+                            {item.year}
+                          </span>
+                        ) : null}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-ink-black font-sans text-sm">No tv shows found</p>
+              )}
+            </section>
           </div>
         ) : (
           <div className="text-center py-8">

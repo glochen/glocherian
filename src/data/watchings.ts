@@ -73,6 +73,7 @@ export const providerText = {
 
 export interface WatchingItem {
   title: string;
+  year?: number;
   type: WatchingType;
   status: WatchingStatus;
   provider: Provider;

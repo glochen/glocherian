@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { WatchingType, typeText } from "../data/watchings";
-import { H3 } from "../design/Typography";
 import _ from "lodash";
 
 const CLIENT_ID = "cc36288f5a9cd0f4cde3b644f680e5c44ad7bb5b34af63ab34a053c8f36fab43";
@@ -8,57 +6,12 @@ const USERNAME = "glochen";
 
 interface TraktItem {
   title: string;
-  network?: string;
-  genres?: string[];
-  overview?: string;
+  year?: number;
 }
 
 interface TraktWatchlistEntry {
   show?: TraktItem;
   movie?: TraktItem;
-}
-
-function renderItemCard(
-  item: TraktItem | undefined,
-  type: WatchingType,
-  statusText: string,
-  statusStyles: { border: string; dot: string; text: string }
-) {
-  if (!item) return null;
-
-  return (
-    <div className={`${statusStyles.border} p-6`}>
-      <div className="flex items-center gap-2 mb-4">
-        <div className={`w-1.5 h-1.5 rounded-full ${statusStyles.dot}`}></div>
-        <span className={`text-xs font-sans tracking-wide ${statusStyles.text}`}>
-          {statusText}
-        </span>
-      </div>
-      <H3 color="ink-black" className="mb-3 leading-tight">
-        {item.title ? _.toLower(item.title) : ""}
-      </H3>
-      <div className="flex items-center gap-2 mb-3">
-        <p className="text-ink-black font-sans text-sm">{typeText[type]}</p>
-        {item.network && (
-          <>
-            <span className="text-ink-black/60">•</span>
-            <p className="text-ink-black font-sans text-sm">{_.toLower(item.network)}</p>
-          </>
-        )}
-        {item.genres && item.genres.length > 0 && (
-          <>
-            <span className="text-ink-black/60">•</span>
-            <p className="text-ink-black font-sans text-sm">{item.genres[0]}</p>
-          </>
-        )}
-      </div>
-      {item.overview && (
-        <p className="text-ink-black font-sans text-sm leading-relaxed">
-          {_.toLower(item.overview)}
-        </p>
-      )}
-    </div>
-  );
 }
 
 async function trakt(path: string) {
@@ -104,29 +57,44 @@ export function WantToWatchColumn() {
 
   if (loading) return null;
 
-  const statusStyles = {
-    border: "content-card-border text-brown-tertiary",
-    dot: "bg-brown-tertiary",
-    text: "text-brown-tertiary",
-  };
+  const uniqueWatchlist = _.take(
+    _.uniqBy(watchlist, (entry) => {
+      const item = entry.show || entry.movie;
+      return _.toLower(item?.title || "");
+    }),
+    10
+  );
 
   return (
-    <>
-      {_.map(watchlist.slice(0, 5), (entry, index) => {
-        const item = entry.show || entry.movie;
-        if (!item) return null;
-        return (
-          <div key={`watchlist-${index}`}>
-            {renderItemCard(
-              item,
-              entry.show ? WatchingType.TVShow : WatchingType.Movie,
-              "want to watch",
-              statusStyles
-            )}
-          </div>
-        );
-      })}
-    </>
+    <div className="content-card-border text-brown-tertiary p-6">
+      <div className="mb-5">
+        <h3 className="text-ink-black text-lg font-sans">want to watch next</h3>
+      </div>
+
+      <div className="space-y-3">
+        {_.map(uniqueWatchlist, (entry, index) => {
+          const item = entry.show || entry.movie;
+          if (!item) return null;
+
+          return (
+            <div
+              key={`${item.title}-${index}`}
+              className="rounded-lg px-3 py-2.5 bg-paper-white/30"
+            >
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="text-ink-black text-sm font-sans leading-tight">
+                  {_.toLower(item.title)}
+                </p>
+                <span className="text-[11px] font-sans text-brown-secondary tracking-wide">
+                  {entry.show ? "tv show" : "movie"}
+                  {item.year ? ` · ${item.year}` : ""}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

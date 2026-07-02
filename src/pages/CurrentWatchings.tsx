@@ -1,5 +1,4 @@
 import { VerticalNavPageLayout } from "../components/VerticalNavPageLayout";
-import { CurrentWatchingsColumn } from "../components/CurrentWatchingsColumn";
 import { WantToWatchColumn } from "../components/WantToWatchColumn";
 import { RecentlyCompletedWatchingsColumn } from "../components/RecentlyCompletedWatchingsColumn";
 import { Film } from "../design/icons/GeneralIcons";
@@ -13,18 +12,10 @@ export function CurrentWatchings() {
         </div>
       </div>
       <div className="flex-grow shrink-0 px-8 pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="space-y-6">
-            <CurrentWatchingsColumn />
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <RecentlyCompletedWatchingsColumn />
 
-          <div className="space-y-6">
-            <RecentlyCompletedWatchingsColumn />
-          </div>
-
-          <div className="space-y-6">
-            <WantToWatchColumn />
-          </div>
+          <WantToWatchColumn />
         </div>
       </div>
     </VerticalNavPageLayout>

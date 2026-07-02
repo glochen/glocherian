@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { WatchingType, typeText } from "../data/watchings";
-import { H3 } from "../design/Typography";
 import _ from "lodash";
 
 const CLIENT_ID = "cc36288f5a9cd0f4cde3b644f680e5c44ad7bb5b34af63ab34a053c8f36fab43";
@@ -8,9 +6,7 @@ const USERNAME = "glochen";
 
 interface TraktItem {
   title: string;
-  network?: string;
-  genres?: string[];
-  overview?: string;
+  year?: number;
 }
 
 interface TraktWatching {
@@ -21,49 +17,6 @@ interface TraktWatching {
 interface TraktHistoryEntry {
   show?: TraktItem;
   movie?: TraktItem;
-}
-
-function renderItemCard(
-  item: TraktItem | undefined,
-  type: WatchingType,
-  statusText: string,
-  statusStyles: { border: string; dot: string; text: string }
-) {
-  if (!item) return null;
-
-  return (
-    <div className={`${statusStyles.border} p-6`}>
-      <div className="flex items-center gap-2 mb-4">
-        <div className={`w-1.5 h-1.5 rounded-full ${statusStyles.dot}`}></div>
-        <span className={`text-xs font-sans tracking-wide ${statusStyles.text}`}>
-          {statusText}
-        </span>
-      </div>
-      <H3 color="ink-black" className="mb-3 leading-tight">
-        {item.title ? _.toLower(item.title) : ""}
-      </H3>
-      <div className="flex items-center gap-2 mb-3">
-        <p className="text-ink-black font-sans text-sm">{typeText[type]}</p>
-        {item.network && (
-          <>
-            <span className="text-ink-black/60">•</span>
-            <p className="text-ink-black font-sans text-sm">{_.toLower(item.network)}</p>
-          </>
-        )}
-        {item.genres && item.genres.length > 0 && (
-          <>
-            <span className="text-ink-black/60">•</span>
-            <p className="text-ink-black font-sans text-sm">{item.genres[0]}</p>
-          </>
-        )}
-      </div>
-      {item.overview && (
-        <p className="text-ink-black font-sans text-sm leading-relaxed">
-          {_.toLower(item.overview)}
-        </p>
-      )}
-    </div>
-  );
 }
 
 async function trakt(path: string) {
@@ -109,7 +62,7 @@ export function RecentlyCompletedWatchingsColumn() {
 
         if (!watchingData || (!watchingData.show && !watchingData.movie)) {
           try {
-            const historyData = await trakt(`/users/${USERNAME}/history?limit=5&extended=full`);
+            const historyData = await trakt(`/users/${USERNAME}/history?limit=50&extended=full`);
             setHistory(_.isArray(historyData) ? historyData : []);
           } catch (err) {
             setHistory([]);
@@ -125,42 +78,44 @@ export function RecentlyCompletedWatchingsColumn() {
 
   if (loading || watching || history.length === 0) return null;
 
-  const seenShows = new Set<string>();
-  const deduplicatedHistory = _.filter(history, (entry) => {
-    if (entry.show) {
-      const showTitle = entry.show.title;
-      if (seenShows.has(showTitle)) {
-        return false;
-      }
-      seenShows.add(showTitle);
-      return true;
-    }
-    return true;
-  });
-
-  const statusStyles = {
-    border: "content-card-border text-brown-primary",
-    dot: "bg-brown-primary",
-    text: "text-brown-primary",
-  };
+  const deduplicatedHistory = _.take(
+    _.uniqBy(history, (entry) => {
+      const item = entry.show || entry.movie;
+      return _.toLower(item?.title || "");
+    }),
+    10
+  );
 
   return (
-    <>
-      {_.map(deduplicatedHistory, (entry, index) => {
-        const item = entry.show || entry.movie;
-        if (!item) return null;
-        return (
-          <div key={`history-${index}`}>
-            {renderItemCard(
-              item,
-              entry.show ? WatchingType.TVShow : WatchingType.Movie,
-              "recently watched",
-              statusStyles
-            )}
-          </div>
-        );
-      })}
-    </>
+    <div className="content-card-border text-brown-primary p-6">
+      <div className="mb-5">
+        <h3 className="text-ink-black text-lg font-sans">recently watched</h3>
+      </div>
+
+      <div className="space-y-3">
+        {_.map(deduplicatedHistory, (entry, index) => {
+          const item = entry.show || entry.movie;
+          if (!item) return null;
+
+          return (
+            <div
+              key={`${item.title}-${index}`}
+              className="rounded-lg px-3 py-2.5 bg-paper-white/30"
+            >
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="text-ink-black text-sm font-sans leading-tight">
+                  {_.toLower(item.title)}
+                </p>
+                <span className="text-[11px] font-sans text-brown-secondary tracking-wide">
+                  {entry.show ? "tv show" : "movie"}
+                  {item.year ? ` · ${item.year}` : ""}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

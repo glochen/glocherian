@@ -7,6 +7,7 @@ const USERNAME = "glochen";
 
 interface TraktItem {
   title: string;
+  year?: number;
   network?: string;
   genres?: string[];
   overview?: string;
@@ -117,6 +118,7 @@ export function useTraktFavorites() {
 
             convertedFavorites.push({
               title: _.toLower(item.title),
+              year: item.year,
               type: entry.show ? WatchingType.TVShow : WatchingType.Movie,
               status: WatchingStatus.Favorite,
               provider: mapNetworkToProvider(item.network),
