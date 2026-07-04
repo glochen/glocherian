@@ -30,7 +30,7 @@ module.exports = {
         "brown-secondary": "#626E5A",
         "brown-tertiary": "#DAD5CC",
         "paper-white": "#F7F5F2",
-        "ink-black": "#222222",
+        "ink-black": "#352F35",
       },
     },
   },

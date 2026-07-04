@@ -26,14 +26,14 @@ export function HeroSection() {
   );
 
   return (
-    <section className="w-full">
+    <section className="w-full pt-4 md:pt-8">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-5 md:gap-10 items-start">
         <SimpleList
           title="favorites"
           items={favoritePages}
           onNavigate={(id) => navigate(`/${id}`)}
         />
-        <div className="flex flex-col items-center justify-center py-2 md:pt-8 gap-3">
+        <div className="flex flex-col items-center justify-center py-2 gap-3 md:self-center">
           <img
             src={`${process.env.PUBLIC_URL}/chinese_seal.png`}
             alt="Chinese seal divider"
@@ -69,7 +69,7 @@ function SimpleList({
   return (
     <div>
       <div className="mb-3 px-1 text-center">
-        <h2 className="text-ink-black text-xl md:text-2xl tracking-tight">
+        <h2 className="text-[#352F35] text-xl md:text-2xl tracking-tight">
           {title}
         </h2>
       </div>
